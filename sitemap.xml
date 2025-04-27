@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/New Post/Index.html</loc>
-    <lastmod>2025-03-06T04:50:40.880Z</lastmod>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-04-27T19:29:54.823Z</lastmod>
   </url>
   <url>
-    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/Can LLMs Think in Idioms/index.html</loc>
-    <lastmod>2025-03-06T04:50:40.878Z</lastmod>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/003_emojis_vs_emotions/emojis_vs_emotions.html</loc>
+    <lastmod>2025-04-27T19:29:54.858Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_superbowl_prediction/superbowl_prediction.html</loc>
+    <lastmod>2025-04-27T19:29:54.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_prompt_poker/prompt_poker.html</loc>
+    <lastmod>2025-04-27T19:29:54.836Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/002_reading_between_the_lines/reading_between_the_lines.html</loc>
+    <lastmod>2025-04-27T19:29:54.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/test_post/index.html</loc>
+    <lastmod>2025-04-27T19:29:54.859Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/Expert Presentation/expert_blog_post.html</loc>
+    <lastmod>2025-04-27T19:29:54.858Z</lastmod>
   </url>
   <url>
     <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-03-06T04:50:40.877Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-03-06T04:50:40.877Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-03-06T04:50:40.878Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chinoany.github.io/comm4190_S25_Using_LLMs_Blog/posts/Expert Presentation/index.html</loc>
-    <lastmod>2025-03-06T04:50:40.878Z</lastmod>
+    <lastmod>2025-04-27T19:29:54.823Z</lastmod>
   </url>
 </urlset>

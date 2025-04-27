@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chino">
-<meta name="dcterms.date" content="2025-03-05">
-<meta name="description" content="Testing ChatGPTs Figurative Understanding">
+<meta name="author" content="An LLM User">
+<meta name="dcterms.date" content="2024-02-02">
+<meta name="description" content="An example post from a Jupyter notebook">
 
-<title>Can LLMs Think in Idioms? – My Explorations with LLMs</title>
+<title>A test post – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-12858c9ce0885248945210bbd3c85d1a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -116,15 +116,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Can LLMs Think in Idioms?</h1>
+      <h1 class="title">A test post</h1>
                   <div>
         <div class="description">
-          Testing ChatGPTs Figurative Understanding
+          An example post from a Jupyter notebook
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">English</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">logic</div>
               </div>
                   </div>
   </div>
@@ -135,14 +136,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Chino </p>
+               <p>An LLM User </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 5, 2025</p>
+        <p class="date">February 2, 2024</p>
       </div>
     </div>
     
@@ -161,20 +162,57 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>ChatGPT and other language models are incredibly skilled at producing human-like text, but how well do they perform when it comes to processing idiomatic language? Idioms—phrases where meaning is not directly derived from their constituent words—challenge the mettle of AI. Idioms require cultural and contextual knowledge, unlike literal phrases. Let’s test this.</p>
-<p>The Experiment</p>
-<p>I asked ChatGPT the following: “Can you use ‘kick the bucket’ in a sentence?”</p>
-<p>The response: “After a long and happy life, the old sailor finally kicked the bucket.” This is a correct use of the idiom, meaning “to die.” So far, so good.</p>
-<p>Next, I tested whether the model could recognize idiomatic misuse: “I was so thirsty, I kicked the bucket and drank all the water.”</p>
-<p>ChatGPT corrected my usage: “That doesn’t quite fit. ‘Kick the bucket’ means to die, so if you’re thirsty, you might say ‘I was so thirsty, I drank the entire bottle of water.’” This suggests the model has a strong grasp of idioms, at least common ones.</p>
-<p>Where It Falls Short</p>
-<p>However, when I tried a less common idiom—“spill the beans”—in a tricky sentence: “I love cooking, so I always spill the beans in my kitchen.”</p>
-<p>ChatGPT didn’t flag this as incorrect and instead responded with: “That’s great! Cooking is a wonderful skill to have.” This reveals an occasional gap: while the model recognizes widely used idioms, it sometimes fails to identify them in unusual or misleading contexts.</p>
-<p>Final Takeaways LLMs are excellent at sensing and using idioms in conventional usage. But they still struggle with: - Rare idioms - Detecting idioms when the situation is complex or ambiguous</p>
-<p>As AI models get better, maybe we will get more contextual intuition, but as things work out currently, idioms are one area where human instincts still enjoy a significant edge.</p>
-<p>Would you let AI make your next stand up comedy? Let me know what you think!</p>
+<section id="a-visualization-problem-for-llms" class="level2">
+<h2 class="anchored" data-anchor-id="a-visualization-problem-for-llms">A visualization problem for LLMs</h2>
+<ul>
+<li>Read the following and see if you can answer the question:</li>
+</ul>
+<blockquote class="blockquote">
+<p>There are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?</p>
+</blockquote>
+<p>Most likely you answered <strong>purple</strong>…</p>
+<p>But it is possible you first said <strong>green</strong> (don’t worry if you did it is quite a common response!)</p>
+<section id="how-do-we-do-it" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-we-do-it">How do we do it?</h3>
+<p>It’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.</p>
+<p>Notice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.</p>
+<p><strong>Notice</strong> 1. The use of <em>anaphor</em> or <em>reference</em>. - <code>Three BOXES -&gt; a pink/purple/green ONE</code> as opposed to <code>a pink box, a purple box and a green box</code>. - <code>The PINK ONE is in the middle ... the purple</code> {BOX} <code>below IT</code> {the pink box}</p>
+<pre><code>We tend to try and avoid this kind of repetition to make our speech more coherent.</code></pre>
+<ol start="2" type="1">
+<li>Although the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |</li>
+</ol>
+</section>
+<section id="how-do-llms-response-to-the-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-llms-response-to-the-prompt">How do LLMs response to the prompt?</h3>
+<p><strong>GPT3.5 Turbo</strong></p>
+<p><img src="gpt3-5.png" width="50%"></p>
+<p>Had some difficulties and answered <strong>green</strong></p>
+<p><strong>Llama2 (chat 7B version)</strong></p>
+<p><img src="llama2-chat7b.png" width="50%"></p>
+<ul>
+<li>Answered correctly (<strong>purple</strong>) and used some so-called <em>chain-of-thought</em> reasoning</li>
+</ul>
+<p><strong>Bing Chat (MS Co-pilot)</strong></p>
+<p>This LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.</p>
+<p>It get’s it correct:</p>
+<blockquote class="blockquote">
+<p>The color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪</p>
+</blockquote>
+<p>But when you follow up and ask it to create visual representation of the box arrangement</p>
+<blockquote class="blockquote">
+<p>PROMPT: Can you create a visual representation of how the boxes are arranged?</p>
+</blockquote>
+<p>It responds</p>
+<blockquote class="blockquote">
+<p>RESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:</p>
+</blockquote>
+<p>And uses DALL-E3 to create 4 different attempts at a visual representation:</p>
+<p><img src="boxes.png" class="img-fluid"></p>
+<p><strong>NONE OF WHICH ARE CORRECT!!!</strong></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

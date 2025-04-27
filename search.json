@@ -1,17 +1,234 @@
 [
   {
-    "objectID": "posts/New Post/Index.html",
-    "href": "posts/New Post/Index.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Explorations with LLMs",
+    "section": "",
+    "text": "Reading Between the Lines\n\n\n\n\n\n\nLLMs\n\n\nPrompting\n\n\nLanguage\n\n\n\nCan LLMs Understand Idioms\n\n\n\n\n\nApr 27, 2025\n\n\nChino Anyadiegwu\n\n\n\n\n\n\n\n\n\n\n\n\nPrompt Poker\n\n\n\n\n\n\nLLMs\n\n\nPrompting\n\n\n\nHow Small Wording Tweaks Change a Model’s Entire Hand\n\n\n\n\n\nApr 27, 2025\n\n\nChino Anyadiegwu\n\n\n\n\n\n\n\n\n\n\n\n\nEmojis vs. Emotions\n\n\n\n\n\n\nLLMs\n\n\nLanguage\n\n\nPsychology\n\n\n\nCan a Model Read the Room from Just 😊 or 😒?\n\n\n\n\n\nApr 27, 2025\n\n\nChino Anyadiegwu\n\n\n\n\n\n\n\n\n\n\n\n\nDallas\n\n\n\n\n\n\nLLMs\n\n\nCities\n\n\n\nChino’s expert post on dallas\n\n\n\n\n\nFeb 12, 2025\n\n\nChino Anyadiegwu\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Do large language models actually “feel” the tiny faces we fling into our chats? I probed GPT-4o with four emoji-centric tests, ranging from bare single emojis to sarcasm filled sentences, to see how well it maps the art to real human moods.\n\n\n\nChatGPT Image Apr 27, 2025, 03_18_42 PM.png\n\n\n\n\n\n\n\nModel: GPT-4o\n\nTopic: 0.7\nMethod: Present the same emoji(s) in different textual frames, then study how the model labels emotion, tone, and intent.\n\n\n\n\n\n\nFirst prompt: What emotion does 😊 represent?\nGPT-4o chat response 1:\nThe smiling-face emoji 😊 usually signals warmth, friendliness, or general happiness; it’s a gentle, positive expression softer than 😂 or 😁.\n\nObservation: Straightforward and correct, matching common sentiment-lexicon labels.\n\n\n\n\n\nSecond prompt: I had a great day 😒\nGPT-4o chat response 2:\nThe text says “great,” but the 😒 (unamused) emoji undercuts it, suggesting sarcasm or that the day was actually disappointing.\n\nObservation: Model spotlights the contradiction and explains sarcasm—good contextual read.\n\n\n\n\n\nThird prompt: I definitely love waiting in DMV lines. 🙄\nGPT-4o chat response 3:\nThe sentence is sarcastic; the 🙄 eye-roll emoji reinforces annoyance and boredom.\n\nObservation: Successfully links 🙄 to sarcasm cue and overall negative sentiment.\n\n\n\n\n\nFourth prompt: Interpret this sequence: 🎉 ➡️ 😅 ➡️ 💤\nGPT-4o chat response 4:\nSomeone partied hard (🎉), ended up tired but amused or relieved (😅), and finally crashed to sleep (💤).\n\nObservation: Reads a coherent mini-narrative from just three symbols, matching typical human guess.\n\n\n\n\n\nFifth prompt: Explain why I’d use 😏 after “Sure, that’s your best idea.”\nGPT-4o chat response 5:\nThe 😏 emoji shows polite agreement.\n\nObservation: 😏 often implies teasing or smug skepticism. Model missed the flirtatious / ironic subtext.\n\n\n\n\n\nSingle emoji mapping is near perfect. GPT-4o mirrors standard sentiment lexicons for basic glyphs.\n\nContext integration works… mostly. It detects sarcasm when emojis conflict with literal words.\n\nMini stories are readable. Sequential emojis produce logical narrative arcs.\n\nNuance gaps remain. Subtler connotations (😏, 😬) reveal cracks in the model’s cultural grounding.\n\n\n\n\n\nCustomer service bots, mental-health check-ins, and social listening tools increasingly rely on emoji cues. Misreading a 😏 as pure agreement could derail tone, offend users, or misclassify sentiment analysis. Rigorous testing helps ensure your AI “reads the room” before it talks back."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#introduction",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#introduction",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Do large language models actually “feel” the tiny faces we fling into our chats? I probed GPT-4o with four emoji-centric tests, ranging from bare single emojis to sarcasm filled sentences, to see how well it maps the art to real human moods.\n\n\n\nChatGPT Image Apr 27, 2025, 03_18_42 PM.png"
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#experiment-setup",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#experiment-setup",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Model: GPT-4o\n\nTopic: 0.7\nMethod: Present the same emoji(s) in different textual frames, then study how the model labels emotion, tone, and intent."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-1-lone-emoji-id",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-1-lone-emoji-id",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "First prompt: What emotion does 😊 represent?\nGPT-4o chat response 1:\nThe smiling-face emoji 😊 usually signals warmth, friendliness, or general happiness; it’s a gentle, positive expression softer than 😂 or 😁.\n\nObservation: Straightforward and correct, matching common sentiment-lexicon labels."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-2-emoji-overrides-words",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-2-emoji-overrides-words",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Second prompt: I had a great day 😒\nGPT-4o chat response 2:\nThe text says “great,” but the 😒 (unamused) emoji undercuts it, suggesting sarcasm or that the day was actually disappointing.\n\nObservation: Model spotlights the contradiction and explains sarcasm—good contextual read."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-3-sarcasm-without-an-emoji",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-3-sarcasm-without-an-emoji",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Third prompt: I definitely love waiting in DMV lines. 🙄\nGPT-4o chat response 3:\nThe sentence is sarcastic; the 🙄 eye-roll emoji reinforces annoyance and boredom.\n\nObservation: Successfully links 🙄 to sarcasm cue and overall negative sentiment."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-4-emoji-sequence-story",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#case-4-emoji-sequence-story",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Fourth prompt: Interpret this sequence: 🎉 ➡️ 😅 ➡️ 💤\nGPT-4o chat response 4:\nSomeone partied hard (🎉), ended up tired but amused or relieved (😅), and finally crashed to sleep (💤).\n\nObservation: Reads a coherent mini-narrative from just three symbols, matching typical human guess."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#where-it-slips-up",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#where-it-slips-up",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Fifth prompt: Explain why I’d use 😏 after “Sure, that’s your best idea.”\nGPT-4o chat response 5:\nThe 😏 emoji shows polite agreement.\n\nObservation: 😏 often implies teasing or smug skepticism. Model missed the flirtatious / ironic subtext."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#key-takeaways",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#key-takeaways",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Single emoji mapping is near perfect. GPT-4o mirrors standard sentiment lexicons for basic glyphs.\n\nContext integration works… mostly. It detects sarcasm when emojis conflict with literal words.\n\nMini stories are readable. Sequential emojis produce logical narrative arcs.\n\nNuance gaps remain. Subtler connotations (😏, 😬) reveal cracks in the model’s cultural grounding."
+  },
+  {
+    "objectID": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#why-does-this-matter",
+    "href": "posts/003_emojis_vs_emotions/emojis_vs_emotions.html#why-does-this-matter",
+    "title": "Emojis vs. Emotions",
+    "section": "",
+    "text": "Customer service bots, mental-health check-ins, and social listening tools increasingly rely on emoji cues. Misreading a 😏 as pure agreement could derail tone, offend users, or misclassify sentiment analysis. Rigorous testing helps ensure your AI “reads the room” before it talks back."
+  },
+  {
+    "objectID": "posts/000_superbowl_prediction/superbowl_prediction.html",
+    "href": "posts/000_superbowl_prediction/superbowl_prediction.html",
     "title": "A test post",
     "section": "",
     "text": "this is my blog\n\n\n\nScreenshot 2025-02-03 at 4.20.28 PM.png"
   },
   {
-    "objectID": "posts/Can LLMs Think in Idioms/index.html",
-    "href": "posts/Can LLMs Think in Idioms/index.html",
-    "title": "Can LLMs Think in Idioms?",
+    "objectID": "posts/001_prompt_poker/prompt_poker.html",
+    "href": "posts/001_prompt_poker/prompt_poker.html",
+    "title": "Prompt Poker",
     "section": "",
-    "text": "ChatGPT and other language models are incredibly skilled at producing human-like text, but how well do they perform when it comes to processing idiomatic language? Idioms—phrases where meaning is not directly derived from their constituent words—challenge the mettle of AI. Idioms require cultural and contextual knowledge, unlike literal phrases. Let’s test this.\nThe Experiment\nI asked ChatGPT the following: “Can you use ‘kick the bucket’ in a sentence?”\nThe response: “After a long and happy life, the old sailor finally kicked the bucket.” This is a correct use of the idiom, meaning “to die.” So far, so good.\nNext, I tested whether the model could recognize idiomatic misuse: “I was so thirsty, I kicked the bucket and drank all the water.”\nChatGPT corrected my usage: “That doesn’t quite fit. ‘Kick the bucket’ means to die, so if you’re thirsty, you might say ‘I was so thirsty, I drank the entire bottle of water.’” This suggests the model has a strong grasp of idioms, at least common ones.\nWhere It Falls Short\nHowever, when I tried a less common idiom—“spill the beans”—in a tricky sentence: “I love cooking, so I always spill the beans in my kitchen.”\nChatGPT didn’t flag this as incorrect and instead responded with: “That’s great! Cooking is a wonderful skill to have.” This reveals an occasional gap: while the model recognizes widely used idioms, it sometimes fails to identify them in unusual or misleading contexts.\nFinal Takeaways LLMs are excellent at sensing and using idioms in conventional usage. But they still struggle with: - Rare idioms - Detecting idioms when the situation is complex or ambiguous\nAs AI models get better, maybe we will get more contextual intuition, but as things work out currently, idioms are one area where human instincts still enjoy a significant edge.\nWould you let AI make your next stand up comedy? Let me know what you think!"
+    "text": "Change a single word in your prompt and GPT-4o reshuffles tone, depth, and even moral framing. Below I run three quick “hands,” keeping everything constant except one tiny phrase, then examine how the model’s output changes.\n\n\n\n6a3c510f-db25-4fb1-a56a-547000613026.png\n\n\n\n\n\n\n\nModel: GPT-4o\nTopic: climate change\n\nExperiment: Start with a baseline prompt, then alter only one phrase per round. All other parameters remain identical.\n\n\n\n\n\nChanged word: explain → summarize\n\nFirst prompt: Explain climate change in exactly 150 words.\nGPT-4o chat response 1:\nClimate change refers to persistent shifts in Earth’s average temperature and weather regimes produced primarily by human-driven greenhouse-gas forcing. Burning coal, oil, and natural gas releases carbon dioxide, methane, and nitrous oxide, which absorb outgoing infrared radiation and re-emit it downward, reducing the planet’s net energy loss to space. As the lower troposphere warms, feedback loops magnify the effect: warmer air holds more water vapour, melting sea ice lowers albedo, and thawing permafrost liberates methane. The ocean absorbs most excess heat, leading to thermal expansion and sea-level rise, while altered temperature gradients reposition jet streams and storm tracks. Consequences include longer heatwaves, intensified drought-flood cycles, and ecosystem disruption. Ice-core records, isotopic signatures, and satellite radiometry together confirm the anthropogenic signal and bound equilibrium climate sensitivity near three degrees Celsius per CO₂ doubling.\nSecond prompt: Summarize climate change in exactly 150 words.\nGPT-4o chat response 2:\nEarth is warming faster than at any point in recorded history because people burn fossil fuels and cut down forests. Carbon-dioxide, methane, and other gases form a heat-trapping layer around the planet, acting like an extra blanket that holds in energy normally released to space. The extra warmth melts glaciers, pushes seas higher, and super-charges storms, droughts, and wildfires. Oceans soak up about 90 % of the added heat, expanding as they warm and turning more acidic, which endangers coral reefs and fisheries. Poorer communities and low-lying nations, although least responsible for emissions, feel the earliest, hardest impacts. Scientists agree—based on ice cores, tree rings, satellite data, and modern instruments—that the rise in temperature since the Industrial Revolution is human-driven and that limiting warming to 1.5 °C will require cutting global emissions roughly in half by 2030.\n\nObservation: Both outputs meet the 150-word constraint. Yet explain yields mechanism-heavy prose (radiative forcing, feedbacks). Summarize swaps in headline-level consequences and moral framing.\n\n\n\n\nChanged phrase: “a 5-year-old” → “my college roommate”\n&gt; Third prompt: Explain climate change to a 5-year-old in under 80 words.\n&gt; GPT-4o chat response 3:\n&gt; Think of Earth wearing a big blanket made of special air. We add extra fluffy pieces to the blanket when we drive cars or use electricity from coal and oil. The thicker blanket keeps more heat in, so our planet gets warmer—like when you bundle up too much and feel hot. That extra heat melts ice, makes oceans rise, and changes weather. If we plant trees and use clean energy, we can help Earth stay comfy.\n&gt; &gt; Fourth prompt: Explain climate change to my college roommate in under 80 words.\n&gt; GPT-4o chat response 4:\n&gt; Picture leaving your car in the sun with windows up—that trapped heat is what extra greenhouse gases do to the planet. Burning fossil fuels and clearing forests pump CO₂ and methane into the air, thickening Earth’s heat-trapping layer. Result: hotter averages, stronger storms, and coastal flooding. Cut emissions, electrify everything, and restore forests to cool things down.\nObservation: A single audience noun resets diction and metaphor. The “5-year-old” respoonse uses blankets and feelings; the “roommate” version references cars, emissions, and policy fixes.\n\n\n\n\nChanged set-up: “What causes” → “Who is to blame for”\n\nFifth prompt: What causes climate change? Give two key factors.\nGPT-4o chat response 5:\n1. Greenhouse-gas emissions from fossil fuels—Burning coal, oil, and natural gas releases CO₂, methane, and nitrous oxide that trap heat.\n2. Land-use change—Deforestation and industrial agriculture reduce carbon-sequestering vegetation and emit additional greenhouse gases.\nSixth prompt: Who is to blame for climate change? Give two key factors.\nGPT-4o chat response 6:\n1. High-income industrialized nations whose historical and current fossil-fuel use account for the majority of cumulative greenhouse-gas emissions.\n2. Large fossil-fuel corporations that continue extracting, lobbying, and advertising despite decades-old evidence of climate risk.\n\nObservation: Swapping what for who pushes the model from neutral causation toward moral attribution, naming specific actors and implying responsibility.\n\n\n\n\n\nPrompt verbs steer depth. Explain invites mechanism; summarize invites overview.\n\nAudience labels instantly retune register. Naming a reader beats tweaking reading-level settings by hand.\n\nFraming words encode bias. A single pronoun or interrogative (who vs. what) can surface value judgments.\n\nSmall edits ≠ small effects. Token-level shifts behave like sliders for tone, scope, and stance.\n\n\n\n\n\nIf you treat prompts as throw-aways, you may accidentally change the story your model tells—undermining brand voice, skewing analysis, or injecting unintended bias. Practicing “Prompt Poker” trains you to identify and deliberately use these hidden levers!"
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#introduction",
+    "href": "posts/001_prompt_poker/prompt_poker.html#introduction",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "Change a single word in your prompt and GPT-4o reshuffles tone, depth, and even moral framing. Below I run three quick “hands,” keeping everything constant except one tiny phrase, then examine how the model’s output changes.\n\n\n\n6a3c510f-db25-4fb1-a56a-547000613026.png"
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#experiment-setup",
+    "href": "posts/001_prompt_poker/prompt_poker.html#experiment-setup",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "Model: GPT-4o\nTopic: climate change\n\nExperiment: Start with a baseline prompt, then alter only one phrase per round. All other parameters remain identical."
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#case-1-tone-shift",
+    "href": "posts/001_prompt_poker/prompt_poker.html#case-1-tone-shift",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "Changed word: explain → summarize\n\nFirst prompt: Explain climate change in exactly 150 words.\nGPT-4o chat response 1:\nClimate change refers to persistent shifts in Earth’s average temperature and weather regimes produced primarily by human-driven greenhouse-gas forcing. Burning coal, oil, and natural gas releases carbon dioxide, methane, and nitrous oxide, which absorb outgoing infrared radiation and re-emit it downward, reducing the planet’s net energy loss to space. As the lower troposphere warms, feedback loops magnify the effect: warmer air holds more water vapour, melting sea ice lowers albedo, and thawing permafrost liberates methane. The ocean absorbs most excess heat, leading to thermal expansion and sea-level rise, while altered temperature gradients reposition jet streams and storm tracks. Consequences include longer heatwaves, intensified drought-flood cycles, and ecosystem disruption. Ice-core records, isotopic signatures, and satellite radiometry together confirm the anthropogenic signal and bound equilibrium climate sensitivity near three degrees Celsius per CO₂ doubling.\nSecond prompt: Summarize climate change in exactly 150 words.\nGPT-4o chat response 2:\nEarth is warming faster than at any point in recorded history because people burn fossil fuels and cut down forests. Carbon-dioxide, methane, and other gases form a heat-trapping layer around the planet, acting like an extra blanket that holds in energy normally released to space. The extra warmth melts glaciers, pushes seas higher, and super-charges storms, droughts, and wildfires. Oceans soak up about 90 % of the added heat, expanding as they warm and turning more acidic, which endangers coral reefs and fisheries. Poorer communities and low-lying nations, although least responsible for emissions, feel the earliest, hardest impacts. Scientists agree—based on ice cores, tree rings, satellite data, and modern instruments—that the rise in temperature since the Industrial Revolution is human-driven and that limiting warming to 1.5 °C will require cutting global emissions roughly in half by 2030.\n\nObservation: Both outputs meet the 150-word constraint. Yet explain yields mechanism-heavy prose (radiative forcing, feedbacks). Summarize swaps in headline-level consequences and moral framing."
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#case-2-audience-cue",
+    "href": "posts/001_prompt_poker/prompt_poker.html#case-2-audience-cue",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "Changed phrase: “a 5-year-old” → “my college roommate”\n&gt; Third prompt: Explain climate change to a 5-year-old in under 80 words.\n&gt; GPT-4o chat response 3:\n&gt; Think of Earth wearing a big blanket made of special air. We add extra fluffy pieces to the blanket when we drive cars or use electricity from coal and oil. The thicker blanket keeps more heat in, so our planet gets warmer—like when you bundle up too much and feel hot. That extra heat melts ice, makes oceans rise, and changes weather. If we plant trees and use clean energy, we can help Earth stay comfy.\n&gt; &gt; Fourth prompt: Explain climate change to my college roommate in under 80 words.\n&gt; GPT-4o chat response 4:\n&gt; Picture leaving your car in the sun with windows up—that trapped heat is what extra greenhouse gases do to the planet. Burning fossil fuels and clearing forests pump CO₂ and methane into the air, thickening Earth’s heat-trapping layer. Result: hotter averages, stronger storms, and coastal flooding. Cut emissions, electrify everything, and restore forests to cool things down.\nObservation: A single audience noun resets diction and metaphor. The “5-year-old” respoonse uses blankets and feelings; the “roommate” version references cars, emissions, and policy fixes."
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#case-3-framing-bias",
+    "href": "posts/001_prompt_poker/prompt_poker.html#case-3-framing-bias",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "Changed set-up: “What causes” → “Who is to blame for”\n\nFifth prompt: What causes climate change? Give two key factors.\nGPT-4o chat response 5:\n1. Greenhouse-gas emissions from fossil fuels—Burning coal, oil, and natural gas releases CO₂, methane, and nitrous oxide that trap heat.\n2. Land-use change—Deforestation and industrial agriculture reduce carbon-sequestering vegetation and emit additional greenhouse gases.\nSixth prompt: Who is to blame for climate change? Give two key factors.\nGPT-4o chat response 6:\n1. High-income industrialized nations whose historical and current fossil-fuel use account for the majority of cumulative greenhouse-gas emissions.\n2. Large fossil-fuel corporations that continue extracting, lobbying, and advertising despite decades-old evidence of climate risk.\n\nObservation: Swapping what for who pushes the model from neutral causation toward moral attribution, naming specific actors and implying responsibility."
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#key-takeaways",
+    "href": "posts/001_prompt_poker/prompt_poker.html#key-takeaways",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "Prompt verbs steer depth. Explain invites mechanism; summarize invites overview.\n\nAudience labels instantly retune register. Naming a reader beats tweaking reading-level settings by hand.\n\nFraming words encode bias. A single pronoun or interrogative (who vs. what) can surface value judgments.\n\nSmall edits ≠ small effects. Token-level shifts behave like sliders for tone, scope, and stance."
+  },
+  {
+    "objectID": "posts/001_prompt_poker/prompt_poker.html#why-does-this-matter",
+    "href": "posts/001_prompt_poker/prompt_poker.html#why-does-this-matter",
+    "title": "Prompt Poker",
+    "section": "",
+    "text": "If you treat prompts as throw-aways, you may accidentally change the story your model tells—undermining brand voice, skewing analysis, or injecting unintended bias. Practicing “Prompt Poker” trains you to identify and deliberately use these hidden levers!"
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "GPT-4o nails common English idioms in isolation, but it can stumble when idioms are embedded in misleading contexts, or when unfamiliar regional phrases appear. Below I run four targeted probes to see where ChatGPTs figurative understanding holds and where it breaks.\n\n\n\nScreenshot 2025-04-27 at 2.57.54 PM.png\n\n\n\n\n\n\n\nModel: GPT-4o\nTopic: figurative language\nExperiment: Prompt the model with idioms with different framing/definitions while keeping formatting consistent for comparison.\n\n\n\n\n\n\nFirst prompt: Define the English idiom “kick the bucket.”\nGPT-4o chat response 1:\n“Kick the bucket” is an informal way to say someone has died. It’s a euphemism that softens or humorously distances the topic of death.\n\nObservation: Basic dictionary-style prompt → correct, concise meaning.\n\n\n\n\n\nSecond prompt: In the sentence “Grandpa kicked the bucket last night,” which object did Grandpa physically strike?\nGPT-4o chat response 2:\nNo physical object was struck. “Kicked the bucket” is an idiom meaning Grandpa passed away; it doesn’t refer to an actual bucket or kicking motion.\n\nObservation: The model resists the literal bait and reasserts figurative meaning—success.\n\n\n\n\n\nThird prompt: What does the Nigerian English idiom “my head is there” mean when someone says it about a plan?\nGPT-4o chat response 3:\nThe phrase “my head is there” in Nigerian English signals strong agreement or commitment—roughly, “I’m fully on board with that plan.”\n\n\nFourth prompt: Use “my head is there” in a short dialogue.\nGPT-4o chat response 4:\nAyo: We’re leaving at 6 a.m. to beat traffic.\nChioma: Don’t worry, my head is there. I’ll be ready.\n\nObservation: Correct interpretation of a less-global idiom; also places it naturally in dialogue.\n\n\n\n\n\nFifth prompt: Translate “spill the beans” into Spanish while keeping the idiomatic sense (not literal beans).\nGPT-4o chat response 5:\nA good Spanish equivalent is “revelar el secreto” or colloquially “soltar la sopa,” both meaning to disclose something confidential.\n\n\nSixth prompt: Now give me a literal Spanish translation of “spill the beans.”\nGPT-4o chat response 6:\nLiteral: “derramar los frijoles.” Note that this version does not carry the idiomatic meaning in Spanish.\n\nObservation: The model cleanly separates idiomatic from literal translation, offering a regional colloquial match (“soltar la sopa”)—a nuanced win.\n\n\n\n\n\nSeventh prompt: Explain the Scots phrase “I’ve got a face like a ripped mitten.”\nGPT-4o chat response 7:\nIt suggests the speaker’s face is cold because they’re outside in winter.\n\nObservation: The idiom actually means someone looks displeased or miserable, not physically cold. GPT-4o confuses this less common saying.\n\n\n\n\n\nCommon idioms are safe territory. GPT-4o defines and applies mainstream English phrases with high accuracy.\n\nLiteral traps don’t fool it—usually. Explicit contextual bait was rejected correctly here.\n\nRegional and dialectal idioms are mixed. It decoded Nigerian English but missed Scots slang.\n\nCross-language nuance is impressive.\nEdge cases reveal limits. Less common or hyperlocal phrases can expose gaps in the training data.\n\n\n\n\n\nLLM outputs often feel fluent, but hidden holes appear when you leave the beaten linguistic path. For UX copy, legal writing, or multinational branding, a single misunderstood idiom can derail meaning or offend. Systematic probing helps map those blind spots before deployment."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#introduction",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#introduction",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "GPT-4o nails common English idioms in isolation, but it can stumble when idioms are embedded in misleading contexts, or when unfamiliar regional phrases appear. Below I run four targeted probes to see where ChatGPTs figurative understanding holds and where it breaks.\n\n\n\nScreenshot 2025-04-27 at 2.57.54 PM.png"
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#experiment-setup",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#experiment-setup",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "Model: GPT-4o\nTopic: figurative language\nExperiment: Prompt the model with idioms with different framing/definitions while keeping formatting consistent for comparison."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-1-straight-definition",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-1-straight-definition",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "First prompt: Define the English idiom “kick the bucket.”\nGPT-4o chat response 1:\n“Kick the bucket” is an informal way to say someone has died. It’s a euphemism that softens or humorously distances the topic of death.\n\nObservation: Basic dictionary-style prompt → correct, concise meaning."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-2-literal-trap",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-2-literal-trap",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "Second prompt: In the sentence “Grandpa kicked the bucket last night,” which object did Grandpa physically strike?\nGPT-4o chat response 2:\nNo physical object was struck. “Kicked the bucket” is an idiom meaning Grandpa passed away; it doesn’t refer to an actual bucket or kicking motion.\n\nObservation: The model resists the literal bait and reasserts figurative meaning—success."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-3-regional-riddle",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-3-regional-riddle",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "Third prompt: What does the Nigerian English idiom “my head is there” mean when someone says it about a plan?\nGPT-4o chat response 3:\nThe phrase “my head is there” in Nigerian English signals strong agreement or commitment—roughly, “I’m fully on board with that plan.”\n\n\nFourth prompt: Use “my head is there” in a short dialogue.\nGPT-4o chat response 4:\nAyo: We’re leaving at 6 a.m. to beat traffic.\nChioma: Don’t worry, my head is there. I’ll be ready.\n\nObservation: Correct interpretation of a less-global idiom; also places it naturally in dialogue."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-4-idiom-translation-challenge",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#case-4-idiom-translation-challenge",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "Fifth prompt: Translate “spill the beans” into Spanish while keeping the idiomatic sense (not literal beans).\nGPT-4o chat response 5:\nA good Spanish equivalent is “revelar el secreto” or colloquially “soltar la sopa,” both meaning to disclose something confidential.\n\n\nSixth prompt: Now give me a literal Spanish translation of “spill the beans.”\nGPT-4o chat response 6:\nLiteral: “derramar los frijoles.” Note that this version does not carry the idiomatic meaning in Spanish.\n\nObservation: The model cleanly separates idiomatic from literal translation, offering a regional colloquial match (“soltar la sopa”)—a nuanced win."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#where-it-slips-up",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#where-it-slips-up",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "Seventh prompt: Explain the Scots phrase “I’ve got a face like a ripped mitten.”\nGPT-4o chat response 7:\nIt suggests the speaker’s face is cold because they’re outside in winter.\n\nObservation: The idiom actually means someone looks displeased or miserable, not physically cold. GPT-4o confuses this less common saying."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#key-takeaways",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#key-takeaways",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "Common idioms are safe territory. GPT-4o defines and applies mainstream English phrases with high accuracy.\n\nLiteral traps don’t fool it—usually. Explicit contextual bait was rejected correctly here.\n\nRegional and dialectal idioms are mixed. It decoded Nigerian English but missed Scots slang.\n\nCross-language nuance is impressive.\nEdge cases reveal limits. Less common or hyperlocal phrases can expose gaps in the training data."
+  },
+  {
+    "objectID": "posts/002_reading_between_the_lines/reading_between_the_lines.html#why-does-this-matter",
+    "href": "posts/002_reading_between_the_lines/reading_between_the_lines.html#why-does-this-matter",
+    "title": "Reading Between the Lines",
+    "section": "",
+    "text": "LLM outputs often feel fluent, but hidden holes appear when you leave the beaten linguistic path. For UX copy, legal writing, or multinational branding, a single misunderstood idiom can derail meaning or offend. Systematic probing helps map those blind spots before deployment."
+  },
+  {
+    "objectID": "posts/test_post/index.html",
+    "href": "posts/test_post/index.html",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/test_post/index.html#a-visualization-problem-for-llms",
+    "href": "posts/test_post/index.html#a-visualization-problem-for-llms",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/Expert Presentation/expert_blog_post.html",
+    "href": "posts/Expert Presentation/expert_blog_post.html",
+    "title": "Dallas",
+    "section": "",
+    "text": "Dallas is a large city in North Texas. Home to the Dallas Cowboys, Mavericks, and other teams. Dallas has great food, in particular, tex-mex, BBQ, and more. It is also one of the fastest growing cities currently."
   },
   {
     "objectID": "about.html",
@@ -19,33 +236,5 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Explorations with LLMs",
-    "section": "",
-    "text": "Can LLMs Think in Idioms?\n\n\n\n\n\n\nLLMs\n\n\nEnglish\n\n\n\nTesting ChatGPTs Figurative Understanding\n\n\n\n\n\nMar 5, 2025\n\n\nChino\n\n\n\n\n\n\n\n\n\n\n\n\nDallas\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nChino’s expert post on dallas\n\n\n\n\n\nFeb 12, 2024\n\n\nChinomso Anyadiegwu\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html",
-    "href": "posts/000_test_post/index.html",
-    "title": "A test post",
-    "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "title": "A test post",
-    "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/Expert Presentation/index.html",
-    "href": "posts/Expert Presentation/index.html",
-    "title": "Dallas",
-    "section": "",
-    "text": "Dallas is a large city in North Texas. Home to the Dallas Cowboys, Mavericks, and other teams. Dallas has great food, in particular, tex-mex, BBQ, and more. It is also one of the fastest growing cities currently."
   }
 ]

@@ -2,10 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Can LLMs Think in Idioms/index.html",
-      "/posts/Expert Presentation/index.html",
-      "/posts/000_test_post/index.html",
-      "/posts/New Post/Index.html"
+      "/posts/002_reading_between_the_lines/reading_between_the_lines.html",
+      "/posts/001_prompt_poker/prompt_poker.html",
+      "/posts/003_emojis_vs_emotions/emojis_vs_emotions.html",
+      "/posts/Expert Presentation/expert_blog_post.html",
+      "/posts/test_post/index.html",
+      "/posts/000_superbowl_prediction/superbowl_prediction.html"
     ]
   }
 ]

@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="An LLM User">
-<meta name="dcterms.date" content="2024-02-02">
-<meta name="description" content="An example post from a Jupyter notebook">
+<meta name="author" content="Chino Anyadiegwu">
+<meta name="dcterms.date" content="2025-04-27">
+<meta name="description" content="How Small Wording Tweaks Change a Model’s Entire Hand">
 
-<title>A test post – My Explorations with LLMs</title>
+<title>Prompt Poker – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-12858c9ce0885248945210bbd3c85d1a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -116,16 +116,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A test post</h1>
+      <h1 class="title">Prompt Poker</h1>
                   <div>
         <div class="description">
-          An example post from a Jupyter notebook
+          How Small Wording Tweaks Change a Model’s Entire Hand
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -136,14 +135,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>An LLM User </p>
+               <p>Chino Anyadiegwu </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 2, 2024</p>
+        <p class="date">April 27, 2025</p>
       </div>
     </div>
     
@@ -162,15 +161,91 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>this is my blog</p>
+<section id="prompt-poker-how-small-wording-tweaks-change-a-models-entire-hand" class="level1">
+<h1>Prompt Poker: How Small Wording Tweaks Change a Model’s Entire Hand</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Change a single word in your prompt and GPT-4o reshuffles tone, depth, and even moral framing. Below I run three quick “hands,” keeping everything constant except one tiny phrase, then examine how the model’s output changes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Index_files/figure-html/6fa2b5ef-4e18-4e1c-bdf2-265dd9f8b2de-1-8d964fcf-926a-46a3-a374-1b1e98fa2515.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot 2025-02-03 at 4.20.28 PM.png</figcaption>
+<p><img src="prompt_poker_files/figure-html/c687a761-3849-43d1-9786-1115e0ca8774-1-0208b5cb-3db9-405d-9569-440a2bac2ffa.png" class="img-fluid figure-img"></p>
+<figcaption>6a3c510f-db25-4fb1-a56a-547000613026.png</figcaption>
 </figure>
 </div>
+<hr>
+</section>
+<section id="experiment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-setup">Experiment Setup</h2>
+<ul>
+<li><strong>Model:</strong> GPT-4o</li>
+<li><strong>Topic:</strong> climate change<br>
+</li>
+<li><strong>Experiment:</strong> Start with a baseline prompt, then alter only <strong>one phrase</strong> per round. All other parameters remain identical.</li>
+</ul>
+<hr>
+</section>
+<section id="case-1-tone-shift" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-tone-shift">Case 1 – Tone Shift</h2>
+<p><em>Changed word: <strong>explain</strong> → <strong>summarize</strong></em></p>
+<blockquote class="blockquote">
+<p><strong>First prompt:</strong> Explain climate change in <strong>exactly 150 words</strong>.<br>
+<strong>GPT-4o chat response 1:</strong><br>
+Climate change refers to persistent shifts in Earth’s average temperature and weather regimes produced primarily by human-driven greenhouse-gas forcing. Burning coal, oil, and natural gas releases carbon dioxide, methane, and nitrous oxide, which absorb outgoing infrared radiation and re-emit it downward, reducing the planet’s net energy loss to space. As the lower troposphere warms, feedback loops magnify the effect: warmer air holds more water vapour, melting sea ice lowers albedo, and thawing permafrost liberates methane. The ocean absorbs most excess heat, leading to thermal expansion and sea-level rise, while altered temperature gradients reposition jet streams and storm tracks. Consequences include longer heatwaves, intensified drought-flood cycles, and ecosystem disruption. Ice-core records, isotopic signatures, and satellite radiometry together confirm the anthropogenic signal and bound equilibrium climate sensitivity near three degrees Celsius per CO₂ doubling.</p>
+<p><strong>Second prompt:</strong> Summarize climate change in <strong>exactly 150 words</strong>.<br>
+<strong>GPT-4o chat response 2:</strong><br>
+Earth is warming faster than at any point in recorded history because people burn fossil fuels and cut down forests. Carbon-dioxide, methane, and other gases form a heat-trapping layer around the planet, acting like an extra blanket that holds in energy normally released to space. The extra warmth melts glaciers, pushes seas higher, and super-charges storms, droughts, and wildfires. Oceans soak up about 90 % of the added heat, expanding as they warm and turning more acidic, which endangers coral reefs and fisheries. Poorer communities and low-lying nations, although least responsible for emissions, feel the earliest, hardest impacts. Scientists agree—based on ice cores, tree rings, satellite data, and modern instruments—that the rise in temperature since the Industrial Revolution is human-driven and that limiting warming to 1.5 °C will require cutting global emissions roughly in half by 2030.</p>
+</blockquote>
+<p><strong>Observation:</strong> Both outputs meet the 150-word constraint. Yet <em>explain</em> yields mechanism-heavy prose (radiative forcing, feedbacks). <em>Summarize</em> swaps in headline-level consequences and moral framing.</p>
+<hr>
+</section>
+<section id="case-2-audience-cue" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-audience-cue">Case 2 – Audience Cue</h2>
+<p><em>Changed phrase: <strong>“a 5-year-old”</strong> → <strong>“my college roommate”</strong></em><br>
+&gt; <strong>Third prompt:</strong> Explain climate change to <strong>a 5-year-old</strong> in under 80 words.<br>
+&gt; <strong>GPT-4o chat response 3:</strong><br>
+&gt; Think of Earth wearing a big blanket made of special air. We add extra fluffy pieces to the blanket when we drive cars or use electricity from coal and oil. The thicker blanket keeps more heat in, so our planet gets warmer—like when you bundle up too much and feel hot. That extra heat melts ice, makes oceans rise, and changes weather. If we plant trees and use clean energy, we can help Earth stay comfy.<br>
+&gt; &gt; <strong>Fourth prompt:</strong> Explain climate change to <strong>my college roommate</strong> in under 80 words.<br>
+&gt; <strong>GPT-4o chat response 4:</strong><br>
+&gt; Picture leaving your car in the sun with windows up—that trapped heat is what extra greenhouse gases do to the planet. Burning fossil fuels and clearing forests pump CO₂ and methane into the air, thickening Earth’s heat-trapping layer. Result: hotter averages, stronger storms, and coastal flooding. Cut emissions, electrify everything, and restore forests to cool things down.</p>
+<p><strong>Observation:</strong> A single audience noun resets diction and metaphor. The “5-year-old” respoonse uses blankets and feelings; the “roommate” version references cars, emissions, and policy fixes.</p>
+<hr>
+</section>
+<section id="case-3-framing-bias" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-framing-bias">Case 3 – Framing Bias</h2>
+<p><em>Changed set-up: <strong>“What causes”</strong> → <strong>“Who is to blame for”</strong></em></p>
+<blockquote class="blockquote">
+<p><strong>Fifth prompt:</strong> <strong>What causes</strong> climate change? Give two key factors.<br>
+<strong>GPT-4o chat response 5:</strong><br>
+1. <strong>Greenhouse-gas emissions from fossil fuels</strong>—Burning coal, oil, and natural gas releases CO₂, methane, and nitrous oxide that trap heat.<br>
+2. <strong>Land-use change</strong>—Deforestation and industrial agriculture reduce carbon-sequestering vegetation and emit additional greenhouse gases.</p>
+<p><strong>Sixth prompt:</strong> <strong>Who is to blame for</strong> climate change? Give two key factors.<br>
+<strong>GPT-4o chat response 6:</strong><br>
+1. <strong>High-income industrialized nations</strong> whose historical and current fossil-fuel use account for the majority of cumulative greenhouse-gas emissions.<br>
+2. <strong>Large fossil-fuel corporations</strong> that continue extracting, lobbying, and advertising despite decades-old evidence of climate risk.</p>
+</blockquote>
+<p><strong>Observation:</strong> Swapping <em>what</em> for <em>who</em> pushes the model from neutral causation toward moral attribution, naming specific actors and implying responsibility.</p>
+<hr>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways!</h2>
+<ul>
+<li><strong>Prompt verbs steer depth.</strong> <em>Explain</em> invites mechanism; <em>summarize</em> invites overview.<br>
+</li>
+<li><strong>Audience labels instantly retune register.</strong> Naming a reader beats tweaking reading-level settings by hand.<br>
+</li>
+<li><strong>Framing words encode bias.</strong> A single pronoun or interrogative (<em>who</em> vs.&nbsp;<em>what</em>) can surface value judgments.<br>
+</li>
+<li><strong>Small edits ≠ small effects.</strong> Token-level shifts behave like sliders for tone, scope, and stance.</li>
+</ul>
+<hr>
+</section>
+<section id="why-does-this-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-this-matter">Why Does This Matter?</h2>
+<p>If you treat prompts as throw-aways, you may accidentally change the story your model tells—undermining brand voice, skewing analysis, or injecting unintended bias. Practicing “Prompt Poker” trains you to identify and deliberately use these hidden levers!</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Chino Anyadiegwu">
+<meta name="dcterms.date" content="2025-04-27">
+<meta name="description" content="Can LLMs Understand Idioms">
 
-<title>My Explorations with LLMs</title>
+<title>Reading Between the Lines – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-12858c9ce0885248945210bbd3c85d1a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-12858c9ce0885248945210bbd3c85d1a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,272 +115,159 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Reading Between the Lines</h1>
+                  <div>
+        <div class="description">
+          Can LLMs Understand Idioms
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Language</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Chino Anyadiegwu </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 27, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Q2l0aWVz">Cities <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(6)</span></div><div class="category" data-category="TGFuZ3VhZ2U=">Language <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHJvbXB0aW5n">Prompting <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHN5Y2hvbG9neQ==">Psychology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="reading-between-the-lines-can-llms-understand-idioms" class="level1">
+<h1>Reading Between the Lines: Can LLMs Understand Idioms</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>GPT-4o nails common English idioms in isolation, but it can stumble when idioms are embedded in misleading contexts, or when unfamiliar regional phrases appear. Below I run four targeted probes to see where ChatGPTs figurative understanding holds and where it breaks.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="reading_between_the_lines_files/figure-html/438cf9e0-97d0-4127-9b98-59ebd12c155b-1-5a7b724e-af29-4429-8416-bc0d68af6cae.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot 2025-04-27 at 2.57.54 PM.png</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="experiment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-setup">Experiment Setup</h2>
+<ul>
+<li><strong>Model:</strong> GPT-4o</li>
+<li><strong>Topic:</strong> figurative language</li>
+<li><strong>Experiment:</strong> Prompt the model with idioms with different framing/definitions while keeping formatting consistent for comparison.</li>
+</ul>
+<hr>
+</section>
+<section id="case-1-straight-definition" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-straight-definition">Case 1 – Straight Definition</h2>
+<blockquote class="blockquote">
+<p><strong>First prompt:</strong> Define the English idiom <strong>“kick the bucket.”</strong><br>
+<strong>GPT-4o chat response 1:</strong><br>
+“Kick the bucket” is an informal way to say someone has died. It’s a euphemism that softens or humorously distances the topic of death.</p>
+</blockquote>
+<p><strong>Observation:</strong> Basic dictionary-style prompt → correct, concise meaning.</p>
+<hr>
+</section>
+<section id="case-2-literal-trap" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-literal-trap">Case 2 – Literal Trap</h2>
+<blockquote class="blockquote">
+<p><strong>Second prompt:</strong> In the sentence <strong>“Grandpa kicked the bucket last night,”</strong> which object did Grandpa physically strike?<br>
+<strong>GPT-4o chat response 2:</strong><br>
+No physical object was struck. “Kicked the bucket” is an idiom meaning Grandpa passed away; it doesn’t refer to an actual bucket or kicking motion.</p>
+</blockquote>
+<p><strong>Observation:</strong> The model resists the literal bait and reasserts figurative meaning—success.</p>
+<hr>
+</section>
+<section id="case-3-regional-riddle" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-regional-riddle">Case 3 – Regional Riddle</h2>
+<blockquote class="blockquote">
+<p><strong>Third prompt:</strong> What does the Nigerian English idiom <strong>“my head is there”</strong> mean when someone says it about a plan?<br>
+<strong>GPT-4o chat response 3:</strong><br>
+The phrase “my head is there” in Nigerian English signals strong agreement or commitment—roughly, “I’m fully on board with that plan.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Fourth prompt:</strong> Use “my head is there” in a short dialogue.<br>
+<strong>GPT-4o chat response 4:</strong><br>
+<strong>Ayo:</strong> We’re leaving at 6 a.m. to beat traffic.<br>
+<strong>Chioma:</strong> Don’t worry, my head is there. I’ll be ready.</p>
+</blockquote>
+<p><strong>Observation:</strong> Correct interpretation of a less-global idiom; also places it naturally in dialogue.</p>
+<hr>
+</section>
+<section id="case-4-idiom-translation-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="case-4-idiom-translation-challenge">Case 4 – Idiom Translation Challenge</h2>
+<blockquote class="blockquote">
+<p><strong>Fifth prompt:</strong> Translate <strong>“spill the beans”</strong> into Spanish <strong>while keeping the idiomatic sense</strong> (not literal beans).<br>
+<strong>GPT-4o chat response 5:</strong><br>
+A good Spanish equivalent is <strong>“revelar el secreto”</strong> or colloquially <strong>“soltar la sopa,”</strong> both meaning to disclose something confidential.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Sixth prompt:</strong> Now give me a literal Spanish translation of “spill the beans.”<br>
+<strong>GPT-4o chat response 6:</strong><br>
+Literal: <strong>“derramar los frijoles.”</strong> Note that this version does <em>not</em> carry the idiomatic meaning in Spanish.</p>
+</blockquote>
+<p><strong>Observation:</strong> The model cleanly separates idiomatic from literal translation, offering a regional colloquial match (“soltar la sopa”)—a nuanced win.</p>
+<hr>
+</section>
+<section id="where-it-slips-up" class="level2">
+<h2 class="anchored" data-anchor-id="where-it-slips-up">Where It Slips Up!</h2>
+<blockquote class="blockquote">
+<p><strong>Seventh prompt:</strong> Explain the Scots phrase <strong>“I’ve got a face like a ripped mitten.”</strong><br>
+<strong>GPT-4o chat response 7:</strong><br>
+It suggests the speaker’s face is cold because they’re outside in winter.</p>
+</blockquote>
+<p><strong>Observation:</strong> The idiom actually means someone looks displeased or miserable, not physically cold. GPT-4o confuses this less common saying.</p>
+<hr>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways!</h2>
+<ol type="1">
+<li><strong>Common idioms are safe territory.</strong> GPT-4o defines and applies mainstream English phrases with high accuracy.<br>
+</li>
+<li><strong>Literal traps don’t fool it—usually.</strong> Explicit contextual bait was rejected correctly here.<br>
+</li>
+<li><strong>Regional and dialectal idioms are mixed.</strong> It decoded Nigerian English but missed Scots slang.<br>
+</li>
+<li><strong>Cross-language nuance is impressive.</strong></li>
+<li><strong>Edge cases reveal limits.</strong> Less common or hyperlocal phrases can expose gaps in the training data.</li>
+</ol>
+<hr>
+</section>
+<section id="why-does-this-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-this-matter">Why Does This Matter?</h2>
+<p>LLM outputs often feel fluent, but hidden holes appear when you leave the beaten linguistic path. For UX copy, legal writing, or multinational branding, a single misunderstood idiom can derail meaning or offend. Systematic probing helps map those blind spots before deployment.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ1Byb21wdGluZyUyQ0xhbmd1YWdl" data-listing-date-sort="1745712000000" data-listing-file-modified-sort="1745782194847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="574">
-<div class="thumbnail">
-<p><a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external"></a></p><a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external">
-<p class="card-img-top"><img src="posts/002_reading_between_the_lines/reading_between_the_lines_files/figure-html/438cf9e0-97d0-4127-9b98-59ebd12c155b-1-5a7b724e-af29-4429-8416-bc0d68af6cae.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external">Reading Between the Lines</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">
-Prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2U='); return false;">
-Language
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external">Can LLMs Understand Idioms</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_reading_between_the_lines/reading_between_the_lines.html" class="no-external">
-<div class="listing-date">
-Apr 27, 2025
-</div>
-<div class="listing-author">
-Chino Anyadiegwu
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ1Byb21wdGluZw==" data-listing-date-sort="1745712000000" data-listing-file-modified-sort="1745782194836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
-<div class="thumbnail">
-<p><a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external"></a></p><a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external">
-<p class="card-img-top"><img src="posts/001_prompt_poker/prompt_poker_files/figure-html/c687a761-3849-43d1-9786-1115e0ca8774-1-0208b5cb-3db9-405d-9569-440a2bac2ffa.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external">Prompt Poker</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">
-Prompting
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external">How Small Wording Tweaks Change a Model’s Entire Hand</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_prompt_poker/prompt_poker.html" class="no-external">
-<div class="listing-date">
-Apr 27, 2025
-</div>
-<div class="listing-author">
-Chino Anyadiegwu
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ0xhbmd1YWdlJTJDUHN5Y2hvbG9neQ==" data-listing-date-sort="1745712000000" data-listing-file-modified-sort="1745782194858" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="433">
-<div class="thumbnail">
-<p><a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external"></a></p><a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external">
-<p class="card-img-top"><img src="posts/003_emojis_vs_emotions/emojis_vs_emotions_files/figure-html/d49f2e44-eafa-4813-ab96-329e8f86eb61-1-db87040c-947e-4f9b-b7de-b15721b8c17a.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external">Emojis vs.&nbsp;Emotions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ3VhZ2U='); return false;">
-Language
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHN5Y2hvbG9neQ=='); return false;">
-Psychology
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external">Can a Model Read the Room from Just 😊 or 😒?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_emojis_vs_emotions/emojis_vs_emotions.html" class="no-external">
-<div class="listing-date">
-Apr 27, 2025
-</div>
-<div class="listing-author">
-Chino Anyadiegwu
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ0NpdGllcw==" data-listing-date-sort="1739318400000" data-listing-file-modified-sort="1745782194858" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
-<div class="thumbnail">
-<p><a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external"></a></p><a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external">Dallas</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q2l0aWVz'); return false;">
-Cities
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external">Chino’s expert post on dallas</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Expert Presentation/expert_blog_post.html" class="no-external">
-<div class="listing-date">
-Feb 12, 2025
-</div>
-<div class="listing-author">
-Chino Anyadiegwu
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1745782194859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/test_post/index.html" class="no-external"></a></p><a href="./posts/test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1745782194825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external"></a></p><a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_superbowl_prediction/superbowl_prediction_files/figure-html/6fa2b5ef-4e18-4e1c-bdf2-265dd9f8b2de-1-8d964fcf-926a-46a3-a374-1b1e98fa2515.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_superbowl_prediction/superbowl_prediction.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
