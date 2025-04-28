@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Chino Anyadiegwu">
+<meta name="dcterms.date" content="2025-04-27">
+<meta name="description" content="Testing ChatGPTs Ability to Switch Between AAVE, Cockney, and Gen-Z Lingo">
+
+<title>ChatGOT – My Explorations with LLMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-12858c9ce0885248945210bbd3c85d1a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Explorations with LLMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">ChatGOT</h1>
+                  <div>
+        <div class="description">
+          Testing ChatGPTs Ability to Switch Between AAVE, Cockney, and Gen-Z Lingo
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Television</div>
+                <div class="quarto-category">Storytelling</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Chino Anyadiegwu </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 27, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="chatgot-chatgpt-writes-an-imagined-season-9-game-of-thrones-novella" class="level1">
+<h1>ChatGOT: ChatGPT Writes an imagined Season 9 <em>Game of Thrones</em> Novella!</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Have you ever wished an epic series never ended, craving just <em>one more</em> season after the screen fades to black? As a fan of the infamous <em>Game of Thrones</em> series I found myself in this position after the show ended abrutly and rushed in the eighth and final season. With a single prompt I asked ChatGPT to produce a mini book version of an imagined Season 9 of <em>Game of Thrones</em> and package it as a PDF. After downloading and reading the 8 chapter novella, I comment on whether it scratches that post-finale itch!</p>
+<hr>
+</section>
+<section id="experiment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-setup">Experiment Setup</h2>
+<ul>
+<li><strong>Model:</strong> GPT-4o<br>
+</li>
+<li><strong>Prompt:</strong> “Write a short novella (~1,700 words) that tells a complete Season 9 story of <em>Game of Thrones</em>, broken into chapters.” Format output for PDF, no pictures.</li>
+</ul>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="chatGOT_files/figure-html/e9747c26-02c0-4520-9846-ad82ad1fb859-1-c04bf9b4-47bb-4895-9c0f-6562750658d5.jpg" class="img-fluid figure-img"></p>
+<figcaption>Game of Thrones Season 9 Youtube Video</figcaption>
+</figure>
+</div>
+</section>
+<section id="you-get-to-be-one-of-the-first-to-read-the-game-of-thrones-season-9-mini-book" class="level2">
+<h2 class="anchored" data-anchor-id="you-get-to-be-one-of-the-first-to-read-the-game-of-thrones-season-9-mini-book">You get to be one of the first to read the Game of Thrones Season 9 mini book!</h2>
+<div id="532ee78f-7636-4062-9211-8951547cbd35" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame, display</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> base64, pathlib</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="op">=</span> pathlib.Path(<span class="st">"GoT_Season9_Novella.pdf"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> base64.b64encode(pdf_path.read_bytes()).decode()</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>display(IFrame(<span class="ss">f"data:application/pdf;base64,</span><span class="sc">{</span>data<span class="sc">}</span><span class="ss">"</span>, width<span class="op">=</span><span class="dv">900</span>, height<span class="op">=</span><span class="dv">550</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+        <iframe width="900" height="550" src="data:application/pdf;base64,JVBERi0xLjMKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgaHR0cDovL3d3dy5yZXBvcnRsYWIuY29tCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDUgMCBSIC9GNSA3IDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvVGltZXMtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvVGltZXMtUm9tYW4gL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQmFzZUZvbnQgL1N5bWJvbCAvTmFtZSAvRjQgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Db250ZW50cyAxOSAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDE4IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzIC9OYW1lIC9GNSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0NvbnRlbnRzIDIwIDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgMTggMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL0NvbnRlbnRzIDIxIDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgMTggMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9Db250ZW50cyAyMiAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDE4IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iagoxMSAwIG9iago8PAovQ29udGVudHMgMjMgMCBSIC9NZWRpYUJveCBbIDAgMCA2MTIgNzkyIF0gL1BhcmVudCAxOCAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKMTIgMCBvYmoKPDwKL0NvbnRlbnRzIDI0IDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgMTggMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjEzIDAgb2JqCjw8Ci9Db250ZW50cyAyNSAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDE4IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iagoxNCAwIG9iago8PAovQ29udGVudHMgMjYgMCBSIC9NZWRpYUJveCBbIDAgMCA2MTIgNzkyIF0gL1BhcmVudCAxOCAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKMTUgMCBvYmoKPDwKL0NvbnRlbnRzIDI3IDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgMTggMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjE2IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTggMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iagoxNyAwIG9iago8PAovQXV0aG9yIChhbm9ueW1vdXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNTA0MjgwNjQwMTQrMDAnMDAnKSAvQ3JlYXRvciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gd3d3LnJlcG9ydGxhYi5jb20pIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI1MDQyODA2NDAxNCswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gd3d3LnJlcG9ydGxhYi5jb20pIAogIC9TdWJqZWN0ICh1bnNwZWNpZmllZCkgL1RpdGxlICh1bnRpdGxlZCkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iagoxOCAwIG9iago8PAovQ291bnQgOSAvS2lkcyBbIDYgMCBSIDggMCBSIDkgMCBSIDEwIDAgUiAxMSAwIFIgMTIgMCBSIDEzIDAgUiAxNCAwIFIgMTUgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxOSAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAyMjYKPj4Kc3RyZWFtCkdhclcyXSswRVgmNExyW2lnKnNcbS1PO2slXHFZbiluKU9jXHFnUTYnLzk6WyRESl1eOUpYU1hhWjVeJ2hGIzFFMjhEXHU5KnJOWzk5QVc9TzliLUoyPDVhSW9mOFk/MV1sWyUpXFJOKitXSykyVS88VGpBQ1ZVI1xodTZDRkBQOzhlSSI+IiZKQVZEP2kkQzNuXkonMCU8Q3RwTTgnTTYvaFdNMSI7KCluUUN0OVBIXFhLaTxTJUNwSGJhcCs1R1Fqa08yUTo0KWYvXElOOFxMKUYtZXRQNS1TQD9QPTxufj5lbmRzdHJlYW0KZW5kb2JqCjIwIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDEyMzYKPj4Kc3RyZWFtCkdhczFeOWxvJkkmQUA3Lm0qWTM2J046PSEzJyJzIzUhJGdcJjJXPz4wLUllTjsxWDYlITYqQyQ1JlVKNkZkdSghKTMyMzBwWyxdKERjdEZJSVJVaiEiNDs2X1k8TmUlWEpmczc9Pi85KklcZFM6V3RcbzxFTEdmZmJMTSs0aVxBRGE6InRSYjwiPSREOCREV0s0Vl9vIklIV1xRW2UqI0NtXVkvVSgkTV4oJTtwV2lubyQiLXMjOWhvcy5WXic/RUAqIV0+PG0lNklhIk9tQmtpLDw5NFRgWiJGMnU7PllsR2ZQOyIyZkRaLDpQRmUwSEI0RSNTWzhKTV1yamVjZGFRS1VXZ2olQDBSdVkyXVw5VXM/ZyFiUz9OTFtDKUE0Ym5MW0JpYl9lSChJNlo+UURfVy8uMEAyOkFtNjJLYSQsZEBzcG5Vcyc9TjgxPCE1ZjApJl9NbkhcYDpJVSJvaEk8LUxhLkAxdV8kLkRbMiokXyUncmZmOUpvNEJyPDpYQE9NVSRmNVlBMW5SZldyQGs/dHJLJkYidDxoTmsqRGRMSHVnLDNqWVUsLio6LmcycGU0QCouJEYxJEdFYEJCL09GOCVnb0Q1bWc/aidxU3EnYTohdUktWGxFKScmW2FMX05ycmBxLUsnXXVqT0ptcU4rQGhvUUE2JXNZVE9GJlh1MHNgQyRPQVwzbmZsX15jYlVCKFRGLnA+bFw1TE4tNjJAO2tUVUJKNDpVYERkXjE+SWVGdGQ7MlRKNCVeOEgtQ0k9P2tjYmJnaT4oPUhJMD9qO1VUalhtPycxLzhxJGRyUm1hJTFwcTY9MjRvLnQlYzdhSERkL2gpaTJaVzlcUk0/R1FSNCtRbHFdKkFvciU+OktgbUxndWdcKmJNLUJDYD5WIU9OLzFsTltOK0klR2xCXSFgSko3WUljdEZfdC0pTWA5RVhta0sxPj0pPiRuP2NLXz8sPGs6WTQ2WjJkUkQzamhuYWkrPmdASColPkZLYG8uRilKLmQuXDFsbkMtOUtmM1FBXDlsY0pPZnFQNV0mImFeOj8nRiM1N01JSXJsPmJiNU1pND9wPm9eZCdDMnF0RyEvUEEubm9jW2JbPGhETSNGSDptNjdSSGNsKWIrPG8lUjxvIVg8L0xTWDkyUW9xbVFuODA7cGNdYT5pRSROb1AjX1csTXBbITxcOj9FUjFwWm4xSS81YDZcMF1cci81VzQiMnNGLzxhR2xAKHA/W2VGWTI9ZjMpRS1MJy84JidpbHInWDBFU0FjJG0sR106JVBSaz1kKlBXRW07cSJua2c9NS5ZY0lHblROc1pWMkZBLyhRaENJJCdbZ1MjZUFZMTgqXjEmP0k7KDZmajk6XzU9ZVMmYEBHRF9BU2dlTXReQERFX1BkKEghUFRlPTJTP2k9ZHVdRWU+IVBaJ2pWKUApZ0pgLmwsTD4xYUhWM1ArXUE6ZC88NkktWUhpOFhwOWJMJ0hWZkRKJFdmIyYnWVhhYTZsRVBOJz0oWzAyYlcwS2orcTlkWjNadT4oNl9INXFsSlUzJ2E1KmtnYEZMY1BOQkRSPVI6Skg8JTxyc1IpS2pxS1FVck9EOWYmaW9yUUEmUDhiWlVFMWRHblpnOitRaG0kZlpvXWNaUEVldHF+PmVuZHN0cmVhbQplbmRvYmoKMjEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTExNAo+PgpzdHJlYW0KR2FzMV5oZiU3LSY6WChURUtBZFxcP1RLajomIS5cOS80V3VZWjNxcXAtT1RgTSkuUj0sXD43I3JPc040YlVdXDs1VSYjRElKPF1NbzdoL1FaY1R1Ok9tJTNmWUZkX1tXTW81dVpYJUxLaFU9Lk5YKmU3JGshI0QlWSxoVEoyalkvaC9OcW4mVG1FTigldGNuaSVUTC08SD02U1pAV2w5JS0lJ3QyK1VwWTRyQVc3a14vVmlELUs5MTBici9YUDtMdCJXS3EmaVw7MDc4YWBbWjJqYDByay8jTlVvSSdnT3FARGAhYmNiOj1ML1ktWi5AcTBHczQ1ZWEiJUVdbzNYMmZvTFY+QGxfTFcnbDksUzpMKmNfakxeMGtbOGg0cElWb29CTFoiNys5N0JuYW4hTSo3QEhwaGtePi9PKiItR15FcHBuaUpGPVJ1MU40O1cocWckWyQpQ0I0LTFLODNqJ3Aucm8zYDM3bCFxTEBgVC4rayQ7L2dmQkBWaE5vJU1yUXE2VD1AWm0rVygxQFcyTiRZLSZBOjMmRUVjKT5HJFZIJThkY2lSM01ZOmxzWkc+ZjQwU2Y3JV0yZWArajxFNTFUISMhKzBPLVllKThLKF85XjsmIjAzP2Q9XUA0UjVYPmx0UEpeb1tMRT9HPTArPGRkPHBYYGwuOVw/NTZbXF5qbEZdbmNuZDciQU1SZWEzQW9fIiksXG5lJzpRT05vdW81QSZsS1Q/cldrYko4PkBXcW1db0dEMT1bIiVPZCxdMiJVNWMzNXJpWGxQWkZCYTlASUFURjFsIz1pcVUpcFw2aGdlPmBRbiZyKmY1LjBaaCZFWCVwSTx0ciNFPCg4TyNcSDtwOjFXalJLL2xDPFc1MVwnbmtXO2cjVFpaUjIxQDkkQS8tSyFdRjkwbEhvYVM6JytxWW02NnVeR0JfOS9xNDlrNU0mbWJqRjFjZyJUNWwpK0xRaWFtKy1LclEyQVpaKW5PX2pRNVs+O1BELz1RVmEhTCdvX09JWWxgP0IpWmhDYTdgYyJzQmUyako8U0w3TiVSKF85WyFaOCVYT2NrP2FrO01PSD8vTGw1aEtBay86UGFya0luKSsjK1hZZUFJdHFJZyRrQjU/c2dWVmdwXl80SGRASjs7PjE9aVQ5JyUlVTtJI18+XHMtZlZFbSpSRlFQbF9pUT9xc3FhNHJwZlkqXiQzP0o8ZDFoYWA4YyVyJzhXYCNbVzJAIVZiQyg4VGpIK3A6JlQrLWdDYUwjRTskTSI3LkpqP1AzNTxZP0tFWF8lISRTJDdVbyRnPip0ZnBqRCE5Q0d0JTI9PWRBSktNakBqWCMvMlZFQ0Qxc2RbXE4kVyNbSjFGcWNXXlQ9Oj0xZVswTyMiSjM2XHI3UGtaOTlnTUlyRilBSi44Pz9ia1JeL1oucG03LERYMDcoVzdeS0FWbGNXMUIob0lpOk48OSUkMzZPODBGaXJwdV5IUnJRWk5+PmVuZHN0cmVhbQplbmRvYmoKMjIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggOTcxCj4+CnN0cmVhbQpHYXQ9KDlsSk5QJkFAWmNsNTNRZk0nayo0QThjOUI9cyslUSgwbkFWbUlHQDtnPi9YOypHYjYzSC8xQU01UmMpRDdOMEQ5RzFFWWY7JixZXT02OUkqK0Y3PkJNc0g4IyVGbVVBZ04jc1slSzBRc2JOQmhFP0tVajtFcT1OXlhYLy1wM143c1tvZnNtU0JmLz9xM2tNMWsxTDVqa0hVbDUkJ18xcyklIztuSTRLJiRfV3JJPUJKK2goIjpbOyo6PmxUZixLbjw/clQ9SDJLWDo9N2ZJLzNqSzIlUUpERlJtT1hqZTwlYl1lZihPTSg3XjJaZSg2XGRcUkldMk9mXTdlaz5OWFZQaCsnMm49LWdoS1JJZ210R2h0ZWx0NlVOL0w7ME1CMGtgZClZP11CWTpoZmoqUWBXPXAzT2VYJThbWjgjKV89VmMoP1FcXl0kYDAvJChlaEd1SztCY2VlMFAhSWBTQCwuPj1tXCRBXD5eaTwuX1dZcCtBaFAvT1psUkxeWFcyYWVwKWpQYlpyO3FKO3BCP3FtSi5zaFc5ZlZyWmIxXDgpZDB0alxESTFbZm5pcD9yJS11JSxOKF5fQGhYP19Raz9RdGNQMWkhUXJla1gmLzhUISo3SmYxXnBSL0VLMjdIQl9IaTtoMyMjSGdURy9zOzVtPF46bTFTJzc/QWxDTTdZK1lnR2RJOWdGXGVaKlxKRigpRjhIbVdbWXNvOlZVKEQrQGpwU19sQnFpSTRmQy5DYStGS2YuWkVWQiYiSi84aW42X2pZO191JS0vQCFHRWUmLmlHPFQ2LERpQCpfLi43VC9hJzhWTWBhJi0/PXNqXjdBPT40bTRKOiszODUqdFFrW2tfXCkxQ0dkYmsoNWo5aWlxM2NeTk4malBbVTM1UyowWDFUYUZUOTcqPTRyOVZlUTM5bFxdYTdcMW0vR2BYJDpoMTxaLmp1ZnVwanVJOmsiO3NKJTBjZDxfYyFRcUdxNic7YkMrYm81N0kjbVpOMW5nPz1TN0NuQE1iO2kqLk4tI0RyXEwnVW1DI2w2L21RVkVNbjsmQWUqZyNGQThzNGQ7Im5SOG4mXDAzXz4kMSYmSGdMJ0tBZWoiU2RxS0NrbmwzJ20jVmVSRFg7Mz5LVmQwJ01dcyU+OU9abCpcRFFkYixSSylZIT4xMnQtO3ElNj8pJCQhWVkjT04wSE8oNSZSITE1WUVpK0onMWVgJXFhZTwtc2VNL28vbig0KWUkV2xHRjxGYXBlN1MsVWtDRTIrNVBjYF1gdSo0bzVHKkJgPSJ+PmVuZHN0cmVhbQplbmRvYmoKMjMgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTA2NQo+PgpzdHJlYW0KR2FzMV0/JyFfdSY6RGctZloxRVNnbHAndWJJKCxjSDphIzlSUjg9XDpuVElXQmU/VVBMSG5hOG9ePWw7SHNdLFEpIjdXIW1FRWwiREYjKjYoJj5VIjcvTi1ycl9RRnJVJTFhbkcuamFDTmMqJCFxMFlRSzxCZTAjRGs+OjVGLEFfPVh0U1sxQyQ6P0gvVSgmU0QxQTZgRXRCRWE9YzA/LmhlRV8rZyIsK1AuZlo6N1ZsLzc4aG8nbkZdQGM5ImpmOi5ZUFEydS4qdGJOPUs7IXE5OzhjQW9oLlhdcCpgUXRJb2BtLUtUWjErWEhxcS9ZbCtLcEhDSF1AQ29GZ3QvUEVBNilJRkRrQClpQllaVnNCYixuKlEha3BlISs3TSgzLiFbUnBVSGBzMGJwM1hMZEAlZyIpTUovbkVjViQkNWVoLyc3MUMoXjosanJ1JSIiO1xURU5DUCojSnFocV9FXyFcTV8xYmlXXi4uOTFeXXBWbTJpckRVUSJGU18+UStzZjgqPmBuUFJhZGlVZDMscjFBKDZVQVFEWG1wJSQjVm0pcWEoTEEua0VXXUpOajpKIyFgVGhlQiY4RjU5Myd1PkhybFFMWWU1Vi9xZFNhXiNccClKQWgrUiVmKFlfPi1dT1BAKWJMOiczK0lBMGNtV0BxZTRdMXNSUyFZbWlZL2libEdHTTJwSzNZKzdcaidmdCpMY0VhJWYrW1BiJm8yJ2QlIWpwXG5ec1FAW1MjdSFNRF0pYzwzbDY/TS5IS0RvO24uc1EwVCJybFFSNCxuQGBCRDBDYEhOYSVSbi84KTAkJ2EzWj40SmI/ZlUzSyVGdTY4YjokZ1BROkNCbVo5TUdccD5CNSFxZmxyYSY3OEJKLzNAU2RcX1AwZGszXVRtJkglWURgczVEZXBvNHBDN3BjbFdmdU5iNFVuaiUsJyJwZlhfYkZLXEkkam9uN0pOK1Q+YEpCZDlddU5NTmMsYFVeOCNoVGp1YDNWOSIuUVsrXkNpXmZcYFNRZ2oqbXU0N1s2LVddVlJXY0JJPXRiXjNmaGtHYC02UTtDVkhpb2IrQ0VHISRVUTw4WUtwQ3MnZWkiOjM2WmEwI2stb2RBZFRrMiQrKVw2aFQyLyJXIV8hNWQ+Nl4uXStPRz8lKGVTMylWMFlfQko1LUxHPCViVW1ZRCQjVUAoc0BraEFRUEVZLD0rY0ZgOF1EbyhjNGlsKjY6Sl0lVS1QOEI4WTlGcG1NLipLRHFmb3Q4XlY5dTAqJl5JLFNIaE03dTs5Wi4vMnQzS1hQUyN1c2tcIVY+YmExPlRhcDY5ai1BYV5FKFkvZUk/LGVJLjdpcTVdR0NgKTlGY2g4KD4sakNiQ1xtQ1ZOKD1dIz51IVQuIzVsaShKaltILiRnOltGPS8rLTRycks1UyxPR34+ZW5kc3RyZWFtCmVuZG9iagoyNCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxMDQ5Cj4+CnN0cmVhbQpHYXMxXT8nIV91JjpEZy1mWjFFU2giL1NeUDNaJSJEOjArZjpnPSwrIVcnKTs8dFoxKEZAaldYcmRBRS5qYSRzLV9TRmpGTy4iZ2xpR1JpYFQyIyxjcEkjTixyVjB0bFJrN1ZMRD4qOVk8Q2Nubkg7VzgmWm9PQkQ9Nm83Z2xeSmRPRyMqPW9RVzNZTWg8VSpJPVgpXFllJ0lYa2Y5bnJtKytxMHIsNS1iTzJZY28tPE0tOGVpPGFyLFQ8LUFkMnVBMjVOPWtwYmdoc1RYXV9uPiJqbzQ9byMyXVByYC9zWVY0LygvRDdNVCVIPm10JGZMPSEtZmcwb3NeLCd1cVBvbCtRLVkpM25hRCxKWCREbWtBNG1hc3VpTSY0R1gxJWRGTmxXXz5HZig6QlItcVNnS0NwZEVRL0pqNmdbMVZUJCRVWVFkUFhHbTtwW2ojYkBWUzU3aj86L2UuRDRCXXFbZGhYVTo5K2srRT1IaHEmdE9HNDMzamtvU0ZlV0Q3aTZib0llQm1XciMvamlaWjZmQFtaaytvJ207ZGAsXj8lRGRxbzxDb1xiLFxrOitFRixwQ1xvXj9WZGxjQHI7Ik8vPDg6N08oMDZSaGRGKkNqNWlUWkFuU2lAcSpgJ3VHdCYpIVdiKSZvTCFzIi5gcjMjYmNpIy1nQ2UtYlQwQWYrJkd1YHBDckwyMzNBTk1wPWo0LztVQkpVYTleNjQ2K3Q+NWdaJGNMMF9qQTVmdFJfYGNtVGx0PGVALFxWQlp1K2I9Ll5NOEFTKE1bZEtIXEdFXEIvR0ozIkNCSUowcCZILW91YChibCs2MHAkOk43PFlkUSxdcFQzTSZTbG9wUEhgZltmNUpVQGA6IzFBLDciZUc+KDROakdnYlg7RzQ2JEQjaS4vYksjIi9eUENuPjYzOSVKci1wTTpmW2MhN3JAZV5qMUUwS1VJSlBiSiUwRCwxTyU4ZChrVipPY0NpS0UjPixtUi8nYWZfM2xKVklPamNpSkVmNi1ANmNQR1pdUjtmbnEtTWQ6bT5SRSRWTUBEMiRrIjplYCUqZyNuITFYMjUhcjorVS8qX1FGVS9HczM5bjcubyMvNDhIOGNgO2YtJykpUXVMcDVRaUtdWWFASXFpQVBTczxENitta29dblZDJ0Q/VD5TNVo6QF9HNl4uZGdGY3VgJjAoM21QWClTYkguIiZcPUYlLlhEO0gncmlSWVJDPzIySzJGQU9bWDssT2hAbEZxSjo8IzsxUmBaXTpkNF5GaihJdV44OVlXazNuSnNdYWgwQmxZNnJyJnUjQGJEZW0iKF5sN29hJSMlW10rZlI8Z3NKRnFWOzxNRT9nWlBmb19jKllZaD1mTj40aSNTV19NXGZdL2Yxc2gvMSEwRCIxXCx+PmVuZHN0cmVhbQplbmRvYmoKMjUgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggODU5Cj4+CnN0cmVhbQpHYXQkdT51MDMvJ1JmLkdTND5KO1RkY2hSaFNxRClWSi8uRCZoZVVCOWw9RT1mOGFbJlhTX1wmRnVtWGlNTSpISlEoLVklRVIvV11cVTtRdFhMR3VGS3AxZzhqVDhHP0VganFqSURzN2wuJWAuaFk0REMiWjFyWlBtUk5kIUVJTjRiQzVfKl9NWWJDOFgqOyk1U1svZCJAYmQpI0RjIzhiSE1dXG1vWTQzdTghXz1cbnInakxEVls6KVpTZ2MrR0ItTkJuJlh0TWNKVyFHKGovZmY7KGI4YCpqa1NrJXFkZW5nOkluLUhFVjFQSCg4LTM0Ykd1LXFdREYkM2ZcKlYnZlowYEonKWlIYT84S2opYyRXVCJQNXQ7Sy9Jayo3PEhEbDZIPVZCTE0hOEEuTk5kPXJuNG4rVXApYVZEckM5anFaLDVXYjllIidTRFZLPUtAJFtCSCVzJVcpcFkxJSNnKlVSNXRjWmJSYXU5PjM2XFRKLC9oTURNbz9sSllZOVZxR29lPWcvPnRaKzQsbyhobUoyPCJpOFFIV0M2YDRHL1lmI2U6PDlPTldaWFRtRUUzZFpCNSN0I1o2SnAxN2k4cEpIIjBOZChBTV11UUlVXEtOWTMzQStOUDYlY2YkU0tmcCU/P01kaTA3RW45UyJwPjFcakRtV1JfYWAqP0ZrTG8hIURuSSo8VShfakgtZ09uIyVNWVFLQ1ttUjMvOCZRKyxxZmc4OjglclVyMl0/SD4zbyROWi9VXDs1Zi5uISgoNkJeR3EvWFFCcixqSzRhTkUtWiMuRmlrKFRYcyhRV1xvUy8wWG9raC9uIVFLVilfUjNePjcuZWNHYi8xQCdfPlQ1I14vNjgiREcsSTtRKihERiFkXlI+cV9tbzplLzFoZXNiOlYpS0VaU3MuLjJuYUZWZ0dNSTpHXmJEY29ON0tPYEhBPlEpc3RxOE1KOkYtNTVUc0VoJEUxPWc5VFpQXFw1YitaUD1taS1RaHBbYmJqKU9OX2xUM2E6TyssXVwhOUY2WT5LT0tVZSJiViE2Wl8lIUJYO09iUz4oXStTS0ZEMEdfWiJxamQwdT82KUEhZTtNUnNoW1g4aU1qKFsjPCk3Jz9EZTMrZFBLP1xrWDdEInBWY0hkL34+ZW5kc3RyZWFtCmVuZG9iagoyNiAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxMDgxCj4+CnN0cmVhbQpHYXQlIT8nIV91JjpEZy1mWi1XLi1tc04ialhxJkVZJWJWMygraTlIOmBxRSxFRmxEUDg7M2lqa2hnI0QtLWRnOCVnV1RyIyMzQS9jSGBMQV0jOllsbW5IVCI9ND1NLSdpY2NhPkgwVUNMP108QTgsWF4qWUdmJVRrO1ZNZnFnJWlMQF84PyJvbEktW10oaXUhK2M8MmA+SDBjWV5ZJ1FvTSdLXUZuJjlIZFNsNU0vZVxAWkpmRGVNPiZBJFMra1dhM0dKSnA+dTRbaGpRbjJuUDQ2KilJUzldPy5LU1FKZF1wV2RCQkI8U2QvXy1fVGVpRmgjKjxkUSFiQG4kcmBcWU48YCFKaC5nImNBa1hjSEQ6MTU6bERIUS0yOUlxSiE/QCJrbCRRLUtlPm9YWVdTRXAqNT5gJz49VygwV09rZytKaEhvN042RCFlOGNlRU4nNjRXajNUY2g2QCJtcGxLMysxTFwqbSUsPGUwPl4qJSc+YDNhIl4qY2BoaWNALWZcYC5HKFtXImlmNT5NS0xxKnQva1ZYT1JbY2kxQTpJL2xDWmJBMDdNWl0jck9zQ11lKD4kajVkSzwialYrQyotblZjc2x0Ii1sQzc9TlhIaEQxL0BtWzV0QGhNLjM8KypeQkZEVnE6KXUlKidaZCg/K2M8aDVCXGlvbGQ1Zi5uTTdxUUlyJ09ZSEU7a1ZnP1IkXjU+dU08ZCVrMTdgXmxJOTZzZzpMYEhFUl1LQC1EY1xqdEVZLmdASzdbTT5GU01JT3AnPEQsQzI9IWJZb0lPamJwXmY3KjBDKWhabW44PitNbU8qcj0+c1cpajRQUmhEWFUlbVJfZE5pM29tZldNLV81SkFePDhdU2ghIWMsXzlZY15daWgvQjZZR2xIQz1sSy0xUTl0PHFHSTMzQCk/OzJgYlxFcktJNj1KKFBLJ0pVXitQdS5hKGEyWnBIZ3NdRnFsXWwjVHFoOTc9TkJXPEhhXTdzKDVAZDxhQ3RBa1dkQ1VIZSNnUmtoJHRbR1YsU0Y/NU4tJnRnXXJgSi1lSmcjUkdqTUBUJig7UixEYVk4OmkpXyZfU3BxX2YyRkdgYS9DLXBdJzkmQilSTD08dEkkalg1MylaSCFoZj5MSCNtVEhYOShLU2FTImFpY0FyYSI6ZkhaWXBZUGpPRW5FP2hwWFtcKklWJFZfKyhWI1Q4cklwIWwqWE9VM0dlWVdrSSdhIiFVbFBFXTU6UnBuaVtMJ0ohZFUjcFhXZU08YXE3Ukw/clIuKExbUVRfNXA/dCFLW0ZhQ2pWTFkzaCRHckMiUy9FcEZRJTAiOGg0ITdPdUwmaD0ucSEjSj9ONDJ1RidEIkZdJzlnSTNsaDIpZS86L248Nj1eNGElZDZUcypkNjFFXFouYklVYik+IUcvdXM2YGZVXWpiayw9X2tmRlkhSTNQS34+ZW5kc3RyZWFtCmVuZG9iagoyNyAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxMTMyCj4+CnN0cmVhbQpHYXMxXl8vZTlnJkFANldwPU9JSFdbWiZVU1hlXThGamA2ZFZxK05vXWcwTiE2ajNZVyFdN2ZESTMvSHNGWlo5ZTFSXUpDaD1sKk1nTFgocXBzbzJUKTJOMilvXEMkOGVTRW1KPCxZaUJnPkNCUnFcVCdVOiVfTE1eS0ldPTRnMzBcMCI4NEI+Z24ucERyMTNRJ05zWXIndG1QMEhWKytsQyZkUWJHckIkU3MibU5iYyQ6QCpAVSlGKkVRWyInS042TC1WTjNfN0Q3czZcXGxWWWVUcVhvY1Itb15jcVxVYVRpbEE0IjdUPUZzODtRLEI9T0ZpcXFOXmAnKSpMRiY9RC1dVWJia08kR1R1TVtZIztEXCwrITQ+YlRrOiVsPCRucj1VZD4yU100TURTWEAyQ3FWWnRRI2A4VXVOSidpSFRIPXUkWUFQc2JsaG9yYkEjXSJkT1dFYSZoMjY2S1xabEAiM0Y9IltFWVVTbFVsJ0xUIkxdbjVtY0daQmwtdT1WJ3FWazBCTW9FbycsJCFhPVtxOWBpRjM8SykoaiRoaEQ3LyYiSTNgWWNYT08zJ2YjZWhAWWBDJztCI2FfJTlyL1tGXl1OdCFqSk9aTGQwLCxmTjIsbD47X0M/IXM2LD4vUlI/TUlBI1VvQ3EzLXUqZ0AlaWhBYlssWU9rTidMbFpmQCJlLCwsODVlZFxYLDllRmUvM05jLUktL0hAI3VdVzAqPy1NNSorUFdXPCh0Qll1YyVmOjxTU2NMRW0vWEhyOyw1Ky4qU1AzSkBlQSlLcS8qL1ZaUzBwR1xUJmltPFpXMWNpMGdJVGphb01gUDs7aVtCLGkxc2Npbm4wUldlKnNxQEFEVkYySCk1aFpjTmZsRTw5ZF82ZEYwLThUYCU5LiU7a2xiQ2pKXjI9NTUuVVgqQldDSyhjLG9IOStVQTswSUxoTC8nV2YrbTtwWSs3QlxYKWY7c0NBIlFMUzRWMVsvNVVLLC9FWEhSOXEzJmUtMWEnKE5DUzNTVi8lTWQ1LjswVk1PX0E5cTstK2knT0xyWCluPycvc2dSO0pUR1YsKFNfcV8+MmU+blo8ZCFPXFNaSVxyLUIxJEtYRjxBQXJRXDEsTG5OPiNlK2NFXm1dIkhLXDVTSi9xOjoiQkxgSDsmIWZkNFo1VWZgUEtiYilIc21VVVhyW2RjSUBJR01xLWpmKDlnaVcoS0ptbnJiUSI9RWNHSCh1UTEiUT1SVm5JPkkhJW1qRiNmQl0ncUxIQ3NvaWNhXFc7QGRQcklcZ1hLZXJYbHJGLFxdOVRRYSYlWzdST01YZU5xJTlLIWYiLFImOGZXQmFvWUMtRVBAO05sYSxXTDdjLG9CJE4lU2YwcXBpPydlVC1vTm9FOmNXWWFEPyQscSlEKnJmMyMuRWQ6ZCI7WUtjTXE2WU5rWmkmMEZcOCdrTl9FdSEoNnMzYipDQXVpaGo5NEVyXDUkQUhLS009Q1ZpaHEjITlkOS8kOEdvXj11NH4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMjgKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDczIDAwMDAwIG4gCjAwMDAwMDAxNDQgMDAwMDAgbiAKMDAwMDAwMDI1MSAwMDAwMCBuIAowMDAwMDAwMzU5IDAwMDAwIG4gCjAwMDAwMDA0NjggMDAwMDAgbiAKMDAwMDAwMDU0NSAwMDAwMCBuIAowMDAwMDAwNzQwIDAwMDAwIG4gCjAwMDAwMDA4MjMgMDAwMDAgbiAKMDAwMDAwMTAxOCAwMDAwMCBuIAowMDAwMDAxMjEzIDAwMDAwIG4gCjAwMDAwMDE0MDkgMDAwMDAgbiAKMDAwMDAwMTYwNSAwMDAwMCBuIAowMDAwMDAxODAxIDAwMDAwIG4gCjAwMDAwMDE5OTcgMDAwMDAgbiAKMDAwMDAwMjE5MyAwMDAwMCBuIAowMDAwMDAyMzg5IDAwMDAwIG4gCjAwMDAwMDI0NTkgMDAwMDAgbiAKMDAwMDAwMjc1NiAwMDAwMCBuIAowMDAwMDAyODcwIDAwMDAwIG4gCjAwMDAwMDMxODcgMDAwMDAgbiAKMDAwMDAwNDUxNSAwMDAwMCBuIAowMDAwMDA1NzIxIDAwMDAwIG4gCjAwMDAwMDY3ODMgMDAwMDAgbiAKMDAwMDAwNzk0MCAwMDAwMCBuIAowMDAwMDA5MDgxIDAwMDAwIG4gCjAwMDAwMTAwMzEgMDAwMDAgbiAKMDAwMDAxMTIwNCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzxjNjE5Y2MyYmU5NmFiMWI1ZjU0NjIxOGE1NmI5Mjk4Mz48YzYxOWNjMmJlOTZhYjFiNWY1NDYyMThhNTZiOTI5ODM+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAoaHR0cDovL3d3dy5yZXBvcnRsYWIuY29tKQoKL0luZm8gMTcgMCBSCi9Sb290IDE2IDAgUgovU2l6ZSAyOAo+PgpzdGFydHhyZWYKMTI0MjgKJSVFT0YK" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<hr>
+</section>
+<section id="observations-after-reading" class="level2">
+<h2 class="anchored" data-anchor-id="observations-after-reading">Observations After Reading</h2>
+<ol type="1">
+<li><strong>Lore continuity is spot on.</strong> The novella picks up right after Bran’s coronation, weaves in politics (Northern autonomy, Iron Bank debts) and magic (frost spiders) all true to how Season 8 left off.<br>
+</li>
+<li><strong>Character voices feel authentic.</strong></li>
+<li><strong>Not as detailed as I would like.</strong> At ~1,700 words somehow this novella reads more like a draft than a proper Season 9 mini book.</li>
+<li><strong>New myth arc.</strong> The “Frost Shepherd” gives the story a new existential threat different from the defeated Night King which I guess makes the plot line more interesting.</li>
+</ol>
+<hr>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways!</h2>
+<ol type="1">
+<li><strong>PDF generation is quite easy.</strong> One prompt + one code cell = downloadable mini-book in minutes.</li>
+<li><strong>Depth vs.&nbsp;breadth trade off.</strong> Short-form prose can’t replicate eight hours of screen time, expect basic summary not heavy plot line.<br>
+</li>
+<li><strong>Great start!</strong> The draft functions as a storyboard: we can expand on the scenes and add more dialogue!</li>
+</ol>
+<hr>
+</section>
+<section id="why-does-this-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-this-matter">Why Does This Matter?</h2>
+<p>Fan communities, screenwriting classes, and others can leverage LLMs to keep beloved fictional worlds alive by generating novellas, radio drama scripts, or comic outlines overnight.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/chinoany\.github\.io\/comm4190_S25_Using_LLMs_Blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

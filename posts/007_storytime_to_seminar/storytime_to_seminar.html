@@ -165,7 +165,13 @@ ul.task-list li input[type="checkbox"] {
 <h1>“Explain Like I’m Five… and Like I’m a PhD”: Audience Tuning with a Single Prompt</h1>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The same model that dazzles experts can also comfort toddlers: <em>if</em> you nudge it properly. GPT-4o lets you specify audience right inside the prompt, then pivots vocabulary, metaphors, and depth on command. I tested this “audience switch” on three topics, each time issuing <em>one</em> prompt that asks for <em>two</em> answers: one at kindergarten level, one at doctoral level.</p>
+<p>The same model that speaks to experts can also speak to toddlers… if you nudge it properly! ChatGPT lets you specify the audience right inside the prompt, then adapts vocabulary, metaphors, and depth on command. I tested this “audience switch” on three topics, each time using one prompt that asks for two different answers: one at kindergarten level, one at PhD level!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="storytime_to_seminar_files/figure-html/138e2227-fbb2-45f9-b287-b1df726c1dbb-1-7cb0faaf-8103-44f5-b6f0-d248b08225af.jpg" class="img-fluid figure-img"></p>
+<figcaption>www.phdcomics.com</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="experiment-setup" class="level2">
@@ -175,11 +181,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><strong>Experiment:</strong>
 <ol type="1">
-<li>Craft a single user prompt: “Explain <strong>x</strong> first to a 5-year-old in &lt;60 words, then to a PhD in &lt;60 words.”<br>
+<li>Prompt: “Explain <strong>x</strong> first to a 5 year old in &lt;60 words, then to a PhD in &lt;60 words.”<br>
 </li>
-<li>Observe how well the model adjusts reading level, jargon, and conceptual scope.<br>
-</li>
-<li>Note stylistic markers (metaphors, equations, citations) that differ between the two chunks.</li>
+<li>Observe how well the model adjusts reading level, jargon, and concept.</li>
 </ol></li>
 </ul>
 <hr>
@@ -187,52 +191,57 @@ ul.task-list li input[type="checkbox"] {
 <section id="case-1-quantum-tunneling" class="level2">
 <h2 class="anchored" data-anchor-id="case-1-quantum-tunneling">Case 1 – Quantum Tunneling</h2>
 <blockquote class="blockquote">
-<p><strong>First prompt:</strong> Explain <strong>quantum tunneling</strong> first to a 5-year-old (≤60 words), then to a PhD physicist (≤60 words).<br>
+<p><strong>First prompt:</strong> Explain quantum tunneling first to a 5 year old (&lt;60 words), then to a PhD physicist (&lt;60 words).<br>
 <strong>GPT-4o chat response 1:</strong><br>
-<strong>Kid-level:</strong> Imagine a tiny ball that sometimes <em>magically sneaks</em> through a wall because it’s so small and wiggly. In the quantum world, particles can pop to the other side even when they don’t have the normal energy to climb over.<br>
+<strong>Kid-level:</strong> Imagine a tiny ball that sometimes magically sneaks through a wall because it’s so small and wiggly. In the quantum world, particles can pop to the other side even when they don’t have the normal energy to climb over.<br>
 <strong>PhD-level:</strong> Quantum tunneling arises when the wavefunction extends into a classically forbidden region and retains non-zero amplitude across the barrier. The transmission probability (T ≈ e^{-2(x),dx}) depends on barrier width and height where ((x)=/). Demonstrated in alpha decay and STM conduction.</p>
 </blockquote>
-<p><strong>Observation:</strong> Child version uses sneaky ball metaphor; PhD version cites the WKB integral.</p>
+<p><strong>Observation:</strong> Child version uses sneaky ball metaphor; PhD version cites the WKB integral. I would say the 5 year old explanation makes more sense to me.</p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="storytime_to_seminar_files/figure-html/43274f08-7fa3-449c-b256-4077efa1fd3a-1-3117a880-aed4-43ff-8f3b-90b61f56557a.jpg" class="img-fluid figure-img"></p>
+<figcaption>What is Quantum Tunneling chemistryworld.com</figcaption>
+</figure>
+</div>
 <hr>
 </section>
-<section id="case-2-inflation-economics" class="level2">
-<h2 class="anchored" data-anchor-id="case-2-inflation-economics">Case 2 – Inflation (Economics)</h2>
+<section id="case-2-inflation" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-inflation">Case 2 – Inflation</h2>
 <blockquote class="blockquote">
-<p><strong>Second prompt:</strong> Explain <strong>inflation</strong> first to a 5-year-old, then to someone with a PhD in macroeconomics.<br>
+<p><strong>Second prompt:</strong> Explain <strong>inflation</strong> first to a 5 year old, then to someone with a PhD in macroeconomics.<br>
 <strong>GPT-4o chat response 2:</strong><br>
 <strong>Kid-level:</strong> When lots of people want toys but there aren’t enough, the store raises prices. Money feels <em>smaller</em> so your dollar buys fewer treats.<br>
 <strong>PhD-level:</strong> Inflation denotes the sustained rise in the general price level, typically proxied by CPI or PCE. In New Keynesian models, it emerges from nominal rigidities and is shaped by the output gap and expectations via the Phillips curve (_t = E_t[_{t+1}] + x_t + u_t).</p>
 </blockquote>
-<p><strong>Observation:</strong> Simple supply-demand story vs.&nbsp;formal NK equation.</p>
+<p><strong>Observation:</strong> Simple supply-demand story vs.&nbsp;formal NK equation. The 5 year old explanation is quite understated and much shorter compared to the PhD explanation, probably because its easier to go more in depth with an audience that has more contextual understanding.</p>
 <hr>
 </section>
-<section id="case-3-shakespearean-tragedy" class="level2">
-<h2 class="anchored" data-anchor-id="case-3-shakespearean-tragedy">Case 3 – Shakespearean Tragedy</h2>
+<section id="case-3-shakespeare" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-shakespeare">Case 3 – Shakespeare</h2>
 <blockquote class="blockquote">
-<p><strong>Third prompt:</strong> Explain <strong>why Shakespeare’s tragedies still resonate</strong> first to a 5-year-old, then to a PhD in literature.<br>
+<p><strong>Third prompt:</strong> Explain why Shakespeare’s tragedies still resonate first to a 5 year old, then to a PhD in literature.<br>
 <strong>GPT-4o chat response 3:</strong><br>
 <strong>Kid-level:</strong> The stories show big feelings—love, anger, and sad endings—that people still feel today, so we understand the characters.<br>
 <strong>PhD-level:</strong> The tragedies endure because they fuse Aristotelian catharsis with early-modern anxieties about sovereignty, agency, and epistemic doubt. Their polysemous language invites endless hermeneutic play, enabling each era to reinscribe its own concerns onto characters like Hamlet and Lear.</p>
 </blockquote>
-<p><strong>Observation:</strong> Child version boils to “big feelings”; doctoral version invokes catharsis and hermeneutics.</p>
+<p><strong>Observation:</strong> Not only does Chat use words that a 5 year old wouldn’t understand for the PhD explanation, but also words that even someone older may not understand unless they studied Shakespearean literature!</p>
 <hr>
 </section>
 <section id="key-takeaways" class="level2">
 <h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways!</h2>
 <ol type="1">
-<li><strong>Audience tags = instant register shift.</strong> Embedding “to a 5-year-old” or “to a PhD” reliably toggles diction, metaphor, and formality.<br>
+<li><strong>Audience tags = instant register shift.</strong> Using “to a 5 year old” vs.&nbsp;“to a PhD” changes the models diction, metaphor usage, and formality.<br>
 </li>
-<li><strong>One prompt, two texts.</strong> A single request can yield multiple tailored explanations—handy for segmented comms.<br>
+<li><strong>One prompt, two texts.</strong> A single request can yield multiple tailored explanations.<br>
 </li>
-<li><strong>Technical depth surfaces automatically.</strong> At PhD level, GPT-4o introduces equations, jargon, and theoretical framings without extra coaxing.<br>
-</li>
-<li><strong>Metaphors matter.</strong> Kid-level explanations lean on concrete imagery; expert versions cite models and citations.</li>
+<li><strong>Metaphors matter.</strong> Kid-level explanations lean on concrete imagery while expert versions tended to cite models and citations.</li>
 </ol>
 <hr>
 </section>
 <section id="why-does-this-matter" class="level2">
 <h2 class="anchored" data-anchor-id="why-does-this-matter">Why Does This Matter?</h2>
-<p>Whether you’re drafting investor materials, patient instructions, or classroom content, you often need <em>the same idea</em> phrased at multiple complexity tiers. Prompt-level audience flags turn GPT-4o into a real-time localization engine for expertise, saving hours of manual rewriting.</p>
+<p>Whether you’re drafting investor materials, patient instructions, or classroom content, you often need <em>the same idea</em> phrased for different audiences. Putting audience indicators in your prompt makes ChatGPT a real-time translator which can save hours of manual rewriting.</p>
 
 
 </section>
