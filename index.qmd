@@ -1,8 +1,8 @@
 ---
-title: My Explorations with LLMs
+title: My Explorations with AI, LLMs, and more
 listing:
   contents: posts
-  sort: date desc
+  sort: date asc
   type: default
   categories: true
   sort-ui: false
