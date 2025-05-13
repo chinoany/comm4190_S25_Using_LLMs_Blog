@@ -2,20 +2,27 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/012_can_ai_curate_a_binge_worthy_playlist/can_ai_curate_a_bigne_worthy_playlist.html",
-      "/posts/010_lets_play_telephone/lets_play_telephone.html",
-      "/posts/011_ai_at_the_bar/ai_at_the_bar.html",
-      "/posts/008_code-switching/code-switching.html",
-      "/posts/007_storytime_to_seminar/storytime_to_seminar.html",
-      "/posts/009_ chatGOT/chatGOT.html",
+      "/posts/000_superbowl_prediction/superbowl_prediction.html",
+      "/posts/Expert Presentation/expert_blog_post.html",
       "/posts/004_building_a_brand_using_AI/building_a_brand_using_AI.html",
       "/posts/006_two_truths_and_a_hallucination/two_truths_and_a_hallucination.html",
       "/posts/002_reading_between_the_lines/reading_between_the_lines.html",
       "/posts/005_sarcasm_detector_challenge/sarcasm_detector_challenge.html",
       "/posts/003_emojis_vs_emotions/emojis_vs_emotions.html",
       "/posts/001_prompt_poker/prompt_poker.html",
-      "/posts/Expert Presentation/expert_blog_post.html",
-      "/posts/000_superbowl_prediction/superbowl_prediction.html"
+      "/posts/008_code-switching/code-switching.html",
+      "/posts/007_storytime_to_seminar/storytime_to_seminar.html",
+      "/posts/009_ chatGOT/chatGOT.html",
+      "/posts/013_gemini_airlines/gemini_airlines.html",
+      "/posts/012_can_ai_curate_a_binge_worthy_playlist/can_ai_curate_a_bigne_worthy_playlist.html",
+      "/posts/010_lets_play_telephone/lets_play_telephone.html",
+      "/posts/011_ai_at_the_bar/ai_at_the_bar.html",
+      "/posts/016_the_perfect_tutor/the_perfect_tutor.html",
+      "/posts/019_instant_news/instant_news.html",
+      "/posts/018_say_yes_to_the_dress/say_yes_to_the_dress.html",
+      "/posts/017_class_to_cardio/class_to_cardio.html",
+      "/posts/014_pixels_of_the_past/pixels_of_the_past.html",
+      "/posts/015_ai_spy/ai_spy.html"
     ]
   }
 ]
